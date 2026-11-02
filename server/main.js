@@ -24,7 +24,7 @@ class SongDao {
   #loader;
   
   constructor() {
-    this.#loader = JsonLoader();
+    this.#loader = new JsonLoader();
   }
   
   async getAll() {

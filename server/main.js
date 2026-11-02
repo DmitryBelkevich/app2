@@ -57,24 +57,29 @@ class SongController {
   constructor() {
     this.#songDao = new SongDao();
   }
-  
+
+  // GET /api/songs
   async getAll(req, res) {
     const songs = await this.#songDao.getAll();
     
     new SongView(songs);
   }
 
-  async getById(req, res) {
-    const song = await this.#songDao.getById(1);
+  // GET /api/songs/:id
+  async getById(id) {
+    const song = await this.#songDao.getById(id);
     
     new View(song);
   }
 }
 
 function main() {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+  
   const controller = new SongController();
-  // controller.getAll(null, null);
-  controller.getById(null, null);
+  // controller.getAll();
+  controller.getById(id);
 }
 
 const app = main();

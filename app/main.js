@@ -3,7 +3,7 @@ import JsonLoader from '../libs/loaders/JsonLoader.js';
 async function main() {
   const loader = new JsonLoader();
 
-  const data = await loader.load("app2/api/songs");
+  const data = await loader.load("api/songs");
   console.log(data);
 }
 

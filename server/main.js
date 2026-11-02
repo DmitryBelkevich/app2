@@ -32,6 +32,14 @@ class SongDao {
     
     return songs;
   }
+
+  async getById(id) {
+    const songs = await this.#loader.load("./songs.json");
+
+    const song = songs.find(song => song.id == id) || null;
+    
+    return song;
+  }
 }
 
 class SongView {
@@ -55,11 +63,18 @@ class SongController {
     
     new SongView(songs);
   }
+
+  async getById(req, res) {
+    const song = await this.#songDao.getById(1);
+    
+    new SongView(song);
+  }
 }
 
 function main() {
   const controller = new SongController();
-  controller.getAll(null, null);
+  // controller.getAll(null, null);
+  controller.getById(null, null);
 }
 
 const app = main();

@@ -43,8 +43,8 @@ class SongController {
     this.#songDao = new SongDao()
   }
   
-  getAll(req, res) {
-    const songs = this.#songDao.getAll();
+  async getAll(req, res) {
+    const songs = await this.#songDao.getAll();
 
     // null — пропускаем функцию-фильтр
     // 2 — количество пробелов для отступа (табуляции)

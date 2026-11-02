@@ -36,13 +36,8 @@ class SongDao {
 
 class SongView {
   constructor(songs) {
-    // null — пропускаем функцию-фильтр
-    // 2 — количество пробелов для отступа (табуляции)
-    const jsonString = JSON.stringify(songs, null, 2);
-    
-    // Безопасно выводим текст на страницу
     const element = document.createElement('pre');
-    element.textContent = jsonString;
+    element.textContent = JSON.stringify(songs, null, 2);
     
     document.body.appendChild(element);
   }

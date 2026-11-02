@@ -18,9 +18,14 @@ class SongDao {
 }
 
 class Controller {
+  #songDao;
+
+  constructor() {
+    this.#songDao = new SongDao()
+  }
+  
   getAll(req, res) {
-    const songDao = new SongDao();
-    const songs = songDao.getAll();
+    const songs = this.#songDao.getAll();
 
     // null — пропускаем функцию-фильтр
     // 2 — количество пробелов для отступа (табуляции)

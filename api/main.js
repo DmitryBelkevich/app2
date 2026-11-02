@@ -1,26 +1,4 @@
-import JsonLoader from '../libs/loaders/JsonLoader.js';
-
-class SongDao {
-  #loader;
-  
-  constructor() {
-    this.#loader = new JsonLoader();
-  }
-  
-  async getAll() {
-    const songs = await this.#loader.load("../database/songs.json");
-    
-    return songs;
-  }
-
-  async getById(id) {
-    const songs = await this.#loader.load("../database/songs.json");
-
-    const song = songs.find(song => song.id == id) || null;
-    
-    return song;
-  }
-}
+import SongDao from './dao/SongDao.js';
 
 class SongView {
   constructor(data) {

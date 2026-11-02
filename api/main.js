@@ -26,8 +26,8 @@ class SongController {
   async getAll() {
     console.log("get ALL");
     
-    const song = { id: 1, name: 'Иван Петров' };
-    const response = Response.json(user, { status: 201 });
+    const songs = { id: 1, name: 'Иван Петров' };
+    const response = Response.json(songs, { status: 201 });
   }
 
   // GET /api/songs?id=:id

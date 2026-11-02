@@ -34,7 +34,7 @@ class SongDao {
   }
 }
 
-class View {
+class SongView {
   constructor(songs) {
     // null — пропускаем функцию-фильтр
     // 2 — количество пробелов для отступа (табуляции)
@@ -58,7 +58,7 @@ class SongController {
   async getAll(req, res) {
     const songs = await this.#songDao.getAll();
     
-    new View(songs);
+    new SongView(songs);
   }
 }
 

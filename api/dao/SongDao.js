@@ -1,10 +1,12 @@
+// import config from '../config/config.js';
 import JsonLoader from '../../libs/loaders/JsonLoader.js';
 
 export default class SongDao {
+  #path;
   #loader;
-  #path = "../database/songs.json";
   
   constructor() {
+    this.#path = "../database/songs.json";
     this.#loader = new JsonLoader();
   }
   

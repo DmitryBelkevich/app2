@@ -34,16 +34,8 @@ class SongDao {
   }
 }
 
-class SongController {
-  #songDao;
-
-  constructor() {
-    this.#songDao = new SongDao()
-  }
-  
-  async getAll(req, res) {
-    const songs = await this.#songDao.getAll();
-
+class View {
+  constructor(songs) {
     // null — пропускаем функцию-фильтр
     // 2 — количество пробелов для отступа (табуляции)
     const jsonString = JSON.stringify(songs, null, 2);
@@ -53,6 +45,22 @@ class SongController {
     element.textContent = jsonString;
     
     document.body.appendChild(element);
+  }
+}
+
+class SongController {
+  #songDao;
+  #view;
+
+  constructor() {
+    this.#songDao = new SongDao();
+    
+  }
+  
+  async getAll(req, res) {
+    const songs = await this.#songDao.getAll();
+    
+    this.#view = new View(songs);
   }
 }
 

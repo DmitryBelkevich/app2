@@ -29,8 +29,6 @@ class SongDao {
   
   async getAll() {
     const songs = await this.#loader.load("./songs.json");
-
-    console.log(songs);
     
     return songs;
   }

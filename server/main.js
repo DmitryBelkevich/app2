@@ -6,7 +6,7 @@ const song = {
 
 // null — пропускаем функцию-фильтр
 // 4 — количество пробелов для отступа (табуляции)
-const jsonString = JSON.stringify(song, null, 4);
+const jsonString = JSON.stringify(song, null, 2);
 
 // Безопасно выводим текст на страницу
 const element = document.getElementById('json');

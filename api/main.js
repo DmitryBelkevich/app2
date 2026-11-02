@@ -35,6 +35,8 @@ class SongController {
       
       // 3. Wait for the full body data to download and parse as JSON
       const data = await response.json();
+
+      console.log(data);
       
       new SongView(data);
     } catch (error) {

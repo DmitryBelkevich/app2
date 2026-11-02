@@ -22,7 +22,7 @@ async function displayResponse() {
     // Читаем содержимое ответа как текст (или .json(), если внутри JSON)
     const textContent = await response.json();
     
-    // Находим элемент на странице и выводим туда текст
+    // view
     const element = document.createElement('pre');
     element.textContent = textContent;
     

@@ -10,7 +10,7 @@ export default class JsonLoader {
       }
       
       // 3. Wait for the full body data to download and parse as JSON
-      const data = await response.text();
+      const data = await response.json();
       
       return data;
     } catch (error) {

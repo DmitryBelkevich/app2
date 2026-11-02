@@ -42,10 +42,10 @@ class SongDao {
   }
 }
 
-class SongView {
-  constructor(songs) {
+class View {
+  constructor(data) {
     const element = document.createElement('pre');
-    element.textContent = JSON.stringify(songs, null, 2);
+    element.textContent = JSON.stringify(data, null, 2);
     
     document.body.appendChild(element);
   }
@@ -67,7 +67,7 @@ class SongController {
   async getById(req, res) {
     const song = await this.#songDao.getById(1);
     
-    new SongView(song);
+    new View(song);
   }
 }
 

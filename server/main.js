@@ -27,7 +27,7 @@ class SongDao {
     this.#loader = JsonLoader();
   }
   
-  getAll() {
+  async getAll() {
     const songs = await this.#loader.load("./server/songs.json");
 
     console.log(songs);

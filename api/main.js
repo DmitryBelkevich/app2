@@ -17,10 +17,16 @@ class SongController {
   }
 
   // GET /api/songs
+  // async getAll() {
+  //   const songs = await this.#songDao.getAll();
+    
+  //   new SongView(songs);
+  // }
+
   async getAll() {
     const songs = await this.#songDao.getAll();
-    
-    new SongView(songs);
+
+    consle.log(songs);
   }
 
   // GET /api/songs?id=:id

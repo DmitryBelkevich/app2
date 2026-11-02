@@ -24,7 +24,9 @@ class SongController {
   // }
 
   async getAll() {
-    const user = { id: 1, name: 'Иван Петров' };
+    console.log("get ALL");
+    
+    const song = { id: 1, name: 'Иван Петров' };
     const response = Response.json(user, { status: 201 });
   }
 

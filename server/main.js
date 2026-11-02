@@ -9,5 +9,7 @@ const song = {
 const jsonString = JSON.stringify(song, null, 2);
 
 // Безопасно выводим текст на страницу
-const element = document.getElementById('json');
+const element = document.createElement('pre');
 element.textContent = jsonString;
+
+document.body.appendChild(element);

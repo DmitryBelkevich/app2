@@ -28,7 +28,7 @@ class SongDao {
   }
   
   async getAll() {
-    const songs = await this.#loader.load("./database/songs.json");
+    const songs = await this.#loader.load("./database/songs2.json");
     
     return songs;
   }

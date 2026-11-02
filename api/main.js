@@ -24,7 +24,7 @@ class SongController {
   // }
 
   async getAll() {
-    const songs = {};
+    const songs = [];
 
     consle.log(songs);
   }

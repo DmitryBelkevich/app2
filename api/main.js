@@ -16,7 +16,7 @@ class SongController {
     this.#songDao = new SongDao();
   }
 
-  GET /api/songs
+  // GET /api/songs
   async getAll() {
     const songs = await this.#songDao.getAll();
     

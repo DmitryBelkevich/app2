@@ -26,7 +26,7 @@ class SongController {
   async getAll() {
     const songs = [];
 
-    consle.log(songs);
+    console.log(songs);
   }
 
   // GET /api/songs?id=:id

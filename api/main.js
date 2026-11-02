@@ -17,27 +17,27 @@ class SongController {
   }
 
   // GET /api/songs
-  // async getAll() {
-  //   const songs = await this.#songDao.getAll();
-    
-  //   new SongView(songs);
-  // }
-
   async getAll() {
-    console.log("get ALL");
+    const songs = await this.#songDao.getAll();
     
-    const songs = { id: 1, title: "aaa" };
-    
-    const response = Response.json(songs, {
-      status: 201,
-      statusText: "OK",
-      headers: {
-        "Content-Type": "application/json"
-      }
-    });
-
     new SongView(songs);
   }
+
+  // async getAll() {
+  //   console.log("get ALL");
+    
+  //   const songs = { id: 1, title: "aaa" };
+    
+  //   const response = Response.json(songs, {
+  //     status: 201,
+  //     statusText: "OK",
+  //     headers: {
+  //       "Content-Type": "application/json"
+  //     }
+  //   });
+
+  //   new SongView(songs);
+  // }
 
   // GET /api/songs?id=:id
   async getById(id) {

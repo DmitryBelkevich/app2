@@ -42,7 +42,7 @@ class SongDao {
   }
 }
 
-class View {
+class SongView {
   constructor(data) {
     const element = document.createElement('pre');
     element.textContent = JSON.stringify(data, null, 2);
@@ -59,17 +59,17 @@ class SongController {
   }
 
   // GET /api/songs
-  async getAll(req, res) {
+  async getAll() {
     const songs = await this.#songDao.getAll();
     
     new SongView(songs);
   }
 
-  // GET /api/songs/:id
+  // GET /api/songs?id=:id
   async getById(id) {
     const song = await this.#songDao.getById(id);
     
-    new View(song);
+    new SongView(song);
   }
 }
 
@@ -78,8 +78,11 @@ function main() {
   const id = params.get("id");
   
   const controller = new SongController();
-  // controller.getAll();
-  controller.getById(id);
+
+  if (!id)
+    controller.getAll();
+  else if (id)
+    controller.getById(id);
 }
 
 const app = main();

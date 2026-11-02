@@ -1,5 +1,7 @@
-function main() {
-  console.log("Server");
-}
+const data = { status: "success", message: "Данные успешно обработаны" };
 
-const app = main();
+// Создает объект ответа с правильным заголовком Content-Type: application/json
+const response = Response.json(data, {
+    status: 200,
+    statusText: "OK"
+});

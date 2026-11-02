@@ -1,4 +1,4 @@
-import JsonLoader from '../libs/loaders/JsonLoader.js';
+import JsonLoader from './libs/loaders/JsonLoader.js';
 
 export default class SongDao {
   #loader;

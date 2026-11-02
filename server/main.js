@@ -32,7 +32,7 @@ class SongDao {
 
     console.log(songs);
     
-    return null;
+    return songs;
   }
 }
 

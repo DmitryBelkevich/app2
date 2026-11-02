@@ -17,7 +17,7 @@ class SongDao {
   }
 }
 
-class Controller {
+class SongController {
   #songDao;
 
   constructor() {
@@ -40,7 +40,7 @@ class Controller {
 }
 
 function main() {
-  const controller = new Controller();
+  const controller = new SongController();
   controller.getAll(null, null);
 }
 

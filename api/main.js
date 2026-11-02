@@ -23,22 +23,6 @@ class SongController {
     new SongView(songs);
   }
 
-  // async getAll() {
-  //   console.log("get ALL");
-    
-  //   const songs = { id: 1, title: "aaa" };
-    
-  //   const response = Response.json(songs, {
-  //     status: 201,
-  //     statusText: "OK",
-  //     headers: {
-  //       "Content-Type": "application/json"
-  //     }
-  //   });
-
-  //   new SongView(songs);
-  // }
-
   // GET /api/songs?id=:id
   async getById(id) {
     const song = await this.#songDao.getById(id);

@@ -24,7 +24,7 @@ class SongController {
   // }
 
   async getAll() {
-    const songs = await this.#songDao.getAll();
+    const songs = {};
 
     consle.log(songs);
   }

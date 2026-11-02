@@ -1,5 +1,5 @@
 function main() {
-  console.log("main");
+  console.log("Hello World");
 }
 
 const app = main();

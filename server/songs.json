@@ -1,12 +1,12 @@
 [
   {
-    id: 1,
-    title: "Song 1",
-    band: "Band"
+    "id": 1,
+    "title": "Song 1",
+    "band": "Band"
   },
   {
-    id: 2,
-    title: "Song 1",
-    band: "Band"
+    "id": 2,
+    "title": "Song 1",
+    "band": "Band"
   }
 ]

@@ -20,7 +20,7 @@ const response = new Response(JSON.stringify(data), {
 async function displayResponse() {
   try {
     // Читаем содержимое ответа как текст (или .json(), если внутри JSON)
-    const textContent = await response.json();
+    const textContent = await response.text();
     
     // view
     const element = document.createElement('pre');

@@ -38,7 +38,11 @@ class SongController {
 
       console.log(data);
       
-      new SongView(data);
+      // new SongView(data);
+      const user = { id: 1, name: 'Иван Петров' };
+
+      // Создает готовый Response с Content-Type: application/json
+      const response = Response.json(user, { status: 200 });
     } catch (error) {
       // 4. Handle network errors or parsing issues
       console.error('Fetch failed:', error);

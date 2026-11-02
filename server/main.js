@@ -50,8 +50,7 @@ class View {
 
 class SongController {
   #songDao;
-  #view;
-
+  
   constructor() {
     this.#songDao = new SongDao();
   }
@@ -59,7 +58,7 @@ class SongController {
   async getAll(req, res) {
     const songs = await this.#songDao.getAll();
     
-    this.#view = new View(songs);
+    new View(songs);
   }
 }
 

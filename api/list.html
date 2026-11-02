@@ -1,16 +1,14 @@
-<div id="output">Здесь появится содержимое ответа...</div>
-
 <script>
 // 1. Создаем данные, которые хотим поместить в ответ
 const data = {
-  message: "Привет! Этот ответ был создан вручную.",
-  timestamp: new Date().toISOString()
+  id: 1,
+  title: "aaa"
 };
 
 // 2. Создаем объект Response вручную
 // Первый аргумент — тело ответа (строка, Blob, ArrayBuffer, FormData и т.д.)
 // Второй аргумент — необязательный объект с настройками (статус, заголовки)
-const myResponse = new Response(JSON.stringify(data), {
+const response = new Response(JSON.stringify(data), {
   status: 200,
   statusText: "OK",
   headers: {
@@ -22,10 +20,13 @@ const myResponse = new Response(JSON.stringify(data), {
 async function displayResponse() {
   try {
     // Читаем содержимое ответа как текст (или .json(), если внутри JSON)
-    const textContent = await myResponse.text();
+    const textContent = await response.json();
     
     // Находим элемент на странице и выводим туда текст
-    document.getElementById("output").textContent = textContent;
+    const element = document.createElement('pre');
+    element.textContent = JSON.stringify(data, null, 2);
+    
+    document.body.appendChild(element);
   } catch (error) {
     console.error("Ошибка при чтении Response:", error);
   }

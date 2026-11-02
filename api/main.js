@@ -17,19 +17,10 @@ class SongController {
   }
 
   // GET /api/songs
-  // async getAll() {
-  //   const songs = await this.#songDao.getAll();
-    
-  //   new SongView(songs);
-  // }
-  
   async getAll() {
-    const user = { id: 1, name: 'Иван Петров' };
-
-    // Создает готовый Response с Content-Type: application/json
-    const response = Response.json(user, { status: 200 });
-
-    console.log(response);
+    const songs = await this.#songDao.getAll();
+    
+    new SongView(songs);
   }
 
   // GET /api/songs?id=:id

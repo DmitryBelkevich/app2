@@ -1,4 +1,4 @@
-import JsonLoader from '../libs/loaders/JsonLoader.js';
+// import JsonLoader from '../libs/loaders/JsonLoader.js';
 
 // async function main() {
 //   const loader = new JsonLoader();
@@ -7,7 +7,7 @@ import JsonLoader from '../libs/loaders/JsonLoader.js';
 //   console.log(data);
 // }
 
-async function main() {
+async function load() {
   try {
     const response = await fetch('https://dmitrybelkevich.github.io/app2/api/songs');
     
@@ -17,10 +17,15 @@ async function main() {
     }
     
     const data = await response.text(); // Читаем тело ответа как JSON
-    console.log(data);
+    return data;
   } catch (error) {
     console.error('Ошибка при запросе:', error);
   }
+}
+
+function main() {
+  const data = load();
+  console.log(data);
 }
 
 const app = main();

@@ -24,7 +24,7 @@ async function load() {
 }
 
 function main() {
-  const data = load();
+  const data = await load();
   console.log(data);
 }
 

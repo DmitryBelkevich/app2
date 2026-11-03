@@ -23,7 +23,7 @@ async function load() {
   }
 }
 
-function main() {
+async function main() {
   const data = await load();
   console.log(data);
 }

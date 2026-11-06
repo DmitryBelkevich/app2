@@ -29,18 +29,18 @@ export default class SongDao {
   #jsonLoader = new JsonLoader();
   
   async getAll() {
-    const data = this.#jsonLoader.load("https://dmitrybelkevich.github.io/app3/api/songs");
+    const arr = this.#jsonLoader.load("https://dmitrybelkevich.github.io/app3/api/songs");
 
-    console.log(data);
+    console.log(arr);
   }
 
   async getById(id) {
-    const data = this.#jsonLoader.load("https://dmitrybelkevich.github.io/app3/api/songs/" + id);
+    const obj = this.#jsonLoader.load("https://dmitrybelkevich.github.io/app3/api/songs/" + id);
     
-    console.log(data);
+    console.log(obj);
 
     const mapper = new SongMapper();
-    const song = mapper.read(data);
+    const song = mapper.read(obj);
 
     return song;
   }

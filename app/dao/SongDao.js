@@ -17,15 +17,6 @@ export default class SongDao {
     return songs;
   }
 
-  // async getById(id) {
-  //   const obj = await this.#jsonLoader.load("https://dmitrybelkevich.github.io/app3/api/songs/" + id);
-
-  //   const mapper = new SongMapper();
-  //   const song = mapper.read(obj);
-
-  //   return song;
-  // }
-
   async getById(id) {
     const arr = await this.#jsonLoader.load("https://dmitrybelkevich.github.io/app3/api/songs");
     const obj = arr.find(obj => obj.id === id) || null;

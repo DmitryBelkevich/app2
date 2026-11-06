@@ -12,9 +12,19 @@ export default class SongMapper {
     song.title = obj.title;
     song.band = obj.band;
     
-    song.genre = new Genre();
-    song.genre.title = obj.genre;
+    song.genre = this.#createGenre(obj);
     
     return song;
+  }
+
+  #index;
+
+  #createGenre(obj) {
+    const genre = new Genre();
+
+    genre.id = this.#index++;
+    genre.title = obj.genre;
+    
+    return genre;
   }
 }

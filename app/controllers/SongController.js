@@ -14,7 +14,7 @@ export default class SongController extends Controller {
   }
 
   async init() {
-    const id = 1;
+    const id = this._paramsService.getId();
     
     this.#song = await this.#songService.getById(id);
     this.#songView = new SongView();

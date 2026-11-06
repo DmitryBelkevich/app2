@@ -5,15 +5,15 @@ export default class ParamsService {
     this.#params = new URLSearchParams(window.location.search);
   }
 
+  getObject() {
+    return Object.fromEntries(this.#params.entries());
+  }
+
   getParam(param) {
     return this.#params.get(param);
   }
 
   getId() {
     return this.#params.get("id");
-  }
-
-  getObject() {
-    return Object.fromEntries(this.#params.entries());
   }
 }

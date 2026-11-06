@@ -5,7 +5,7 @@ export default class SongsMapper {
   
   read(arr) {
     arr.forEach(obj, index => {
-      arr[index] = this.#songsMapper.read(obj);
+      arr[index] = this.#songMapper.read(obj);
     });
     
     return arr;

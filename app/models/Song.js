@@ -3,6 +3,7 @@ import Model from './Model.js';
 export default class Song extends Model {
   #band;
   #title;
+  #genre;
 
   get band() {
     return this.#band;
@@ -18,5 +19,13 @@ export default class Song extends Model {
 
   set title(title) {
     this.#title = title;
+  }
+
+  get genre() {
+    return this.#genre;
+  }
+
+  set genre(genre) {
+    this.#genre = genre;
   }
 }

@@ -1,5 +1,6 @@
 import Config from '../config/Config.js';
 
+import MainController from '../controllers/MainController.js';
 import ListController from '../controllers/ListController.js';
 import SongController from '../controllers/SongController.js';
 
@@ -7,6 +8,7 @@ export default class Dispatcher {
   #routes = [];
   
   constructor() {
+    this.#routes[""] = new MainController();
     this.#routes["list"] = new ListController();
     this.#routes["song"] = new SongController();
   }

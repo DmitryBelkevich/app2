@@ -2,6 +2,12 @@ import Genre from '../models/Genre.js';
 
 export default class GenresMapper {
   read(arr) {
+    const genres = this.createGenres(arr);
+    
+    return genres;
+  }
+
+  createGenres(arr) {
     // 1
     const set = new Set();
     arr.forEach(obj => set.add(obj.genre));
@@ -19,7 +25,5 @@ export default class GenresMapper {
       arr2[index] = genre;
     });
     console.log(arr2);
-    
-    return null;
   }
 }

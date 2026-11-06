@@ -10,6 +10,7 @@ export default class SongDao {
   
   async getAll() {
     const arr = await this.#jsonLoader.load("https://dmitrybelkevich.github.io/app3/api/songs");
+    console.log(arr);
 
     const mapper = new SongsMapper();
     const songs = mapper.read(arr);

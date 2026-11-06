@@ -22,6 +22,8 @@ export default class GenresMapper {
         map.set(obj.genre, genre);
       }
     });
+
+    console.log(map);
     
     return Array.from(map);
   }

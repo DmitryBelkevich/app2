@@ -1,8 +1,8 @@
 import Song from '../models/Song.js';
-import SongsMapper from './SongsMapper.js';
+import SongMapper from './SongMapper.js';
 
 export default class SongsMapper {
-  #songsMapper = new SongsMapper();
+  #songMapper = new SongMapper();
   
   read(arr) {
     arr.forEach(obj, index => {

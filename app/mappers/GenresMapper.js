@@ -25,6 +25,6 @@ export default class GenresMapper {
 
     console.log(map);
     
-    return Array.from(map);
+    return null;
   }
 }

@@ -16,7 +16,7 @@ export default class SongDao {
   }
 
   async getById(id) {
-    const arr = await this.#jsonLoader.load("https://dmitrybelkevich.github.io/app3/api/songs"); // GET api/songs/?id=:id
+    const arr = await this.#jsonLoader.load("https://dmitrybelkevich.github.io/app3/api/songs/?id=" + id); // GET api/songs/?id=:id
     const obj = arr.find(obj => obj.id === id) || null;
 
     const mapper = new SongMapper();

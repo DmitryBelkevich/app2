@@ -13,8 +13,8 @@ export default class ListController extends Controller {
     this.#songDao = new SongDao();
   }
 
-  init() {
-    this.#songs = this.#songDao.getAll();
+  async init() {
+    this.#songs = await this.#songDao.getAll();
     this.#listView = new ListView();
 
     console.log(this.#songs);

@@ -17,7 +17,7 @@ export default class SongMapper {
     return song;
   }
 
-  #index;
+  #index = 1;
 
   #createGenre(obj) {
     const genre = new Genre();

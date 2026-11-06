@@ -8,7 +8,6 @@ export default class GenresMapper {
   }
 
   createGenres(arr) {
-    // 1
     const map = new Map();
 
     let i = 1;
@@ -22,9 +21,7 @@ export default class GenresMapper {
         map.set(obj.genre, genre);
       }
     });
-
-    console.log(map);
     
-    return null;
+    return map;
   }
 }

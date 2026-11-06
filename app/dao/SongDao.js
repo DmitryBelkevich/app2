@@ -9,7 +9,7 @@ export default class SongDao {
   #jsonLoader = new JsonLoader();
   
   async getAll() {
-    const arr = await this.#jsonLoader.load("https://dmitrybelkevich.github.io/app3/api/songs");
+    const arr = await this.#jsonLoader.load("https://dmitrybelkevich.github.io/app3/api/songs"); // api/songs
 
     const mapper = new SongsMapper();
     const songs = mapper.read(arr);
@@ -18,7 +18,7 @@ export default class SongDao {
   }
 
   async getById(id) {
-    const arr = await this.#jsonLoader.load("https://dmitrybelkevich.github.io/app3/api/songs");
+    const arr = await this.#jsonLoader.load("https://dmitrybelkevich.github.io/app3/api/songs"); // api/songs/:id
     const obj = arr.find(obj => obj.id === id) || null;
 
     const mapper = new SongMapper();

@@ -12,4 +12,8 @@ export default class ParamsService {
   getId() {
     return this.#params.get("id");
   }
+
+  getObject() {
+    return Object.fromEntries(this.#params.entries());
+  }
 }

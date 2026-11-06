@@ -9,21 +9,20 @@ export default class GenresMapper {
 
   createGenres(arr) {
     // 1
-    const set = new Set();
-    arr.forEach(obj => set.add(obj.genre));
+    const map = new Map();
 
-    // 2
-    const arr2 = Array.from(set);
     let i = 1;
-    arr2.forEach((value, index) => {
-      const genre = new Genre();
-      
-      genre.id = i++;
-      genre.title = value;
-
-      arr2[index] = genre;
+    arr.forEach(obj => {
+      if (!map.has(obj.genre)) {
+        const genre = new Genre()
+        
+        genre.id = i++;
+        genre.title = value;
+        
+        map.set(obj.genre, genre);
+      }
     });
     
-    return arr2;
+    return Array.from(map);
   }
 }

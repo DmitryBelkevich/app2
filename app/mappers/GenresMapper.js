@@ -24,6 +24,7 @@ export default class GenresMapper {
 
       arr2[index] = genre;
     });
-    console.log(arr2);
+    
+    return arr2;
   }
 }

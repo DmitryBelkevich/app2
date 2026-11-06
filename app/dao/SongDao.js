@@ -3,8 +3,6 @@ import JsonLoader from '../loaders/JsonLoader.js';
 import SongMapper from '../mappers/SongMapper.js';
 import SongsMapper from '../mappers/SongsMapper.js';
 
-import Song from '../models/Song.js';
-
 export default class SongDao {
   #jsonLoader = new JsonLoader();
   

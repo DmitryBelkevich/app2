@@ -13,8 +13,8 @@ export default class SongController extends Controller {
     this.#songDao = new SongDao();
   }
 
-  init() {
-    this.#song = this.#songDao.getById(1);
+  async init() {
+    this.#song = await this.#songDao.getById(1);
     this.#songView = new SongView();
 
     console.log(this.#song);

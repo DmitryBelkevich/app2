@@ -7,7 +7,7 @@ export default class SongDao {
   #jsonLoader;
 
   constructor() {
-    this.jsonLoader = new JsonLoader();
+    this.#jsonLoader = new JsonLoader();
   }
   
   async getAll() {

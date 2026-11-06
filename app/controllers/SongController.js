@@ -8,7 +8,7 @@ export default class SongController extends Controller {
   #song;
   #songView;
   
-  constructor() {
+  constructor( ) {
     super();
     this.#songDao = new SongDao();
   }

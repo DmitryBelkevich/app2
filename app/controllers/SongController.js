@@ -1,20 +1,20 @@
 import Controller from './Controller.js';
 
-import SongDao from '../dao/SongDao.js';
+import SongService from '../services/SongService.js';
 import SongView from '../views/SongView.js';
 
 export default class SongController extends Controller {
-  #songDao;
+  #songService;
   #song;
   #songView;
   
   constructor() {
     super();
-    this.#songDao = new SongDao();
+    this.#songService = new SongService();
   }
 
   async init() {
-    this.#song = await this.#songDao.getById(1);
+    this.#song = await this.#songService.getById(1);
     this.#songView = new SongView();
 
     console.log(this.#song);

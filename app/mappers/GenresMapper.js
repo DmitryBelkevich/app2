@@ -11,7 +11,6 @@ export default class GenresMapper {
     // 1
     const set = new Set();
     arr.forEach(obj => set.add(obj.genre));
-    console.log(set);
 
     // 2
     const arr2 = Array.from(set);

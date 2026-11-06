@@ -8,10 +8,14 @@ export default class SongService {
   }
   
   async getAll() {
-    return this.#songDao.getAll();
+    const songs = await this.#songDao.getAll();
+    
+    return songs;
   }
 
   async getById(id) {
-    return this.#songDao.getById(id);
+    const song = await this.#songDao.getById(id);
+    
+    return song;
   }
 }

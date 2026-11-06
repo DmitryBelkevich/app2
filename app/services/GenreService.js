@@ -8,10 +8,14 @@ export default class GenreService {
   }
   
   async getAll() {
-    return await this.#genreDao.getAll();
+    const genres = await this.#genreDao.getAll();
+    
+    return genres;
   }
 
   async getById(id) {
-    return await this.#genreDao.getById(id);
+    const genre = await this.#genreDao.getById(id);
+    
+    return genre;
   }
 }

@@ -1,5 +1,13 @@
+import ParamsService from '../services/ParamsService.js';
+
 export default class Controller {
-  init() {
+  #paramsService;
+  
+  constructor() {
+    this.#paramsService = new ParamsService();
+  }
+  
+  async init() {
     console.log("init");
   }
 }

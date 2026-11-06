@@ -17,7 +17,7 @@ export default class GenresMapper {
         const genre = new Genre()
         
         genre.id = i++;
-        genre.title = value;
+        genre.title = obj.genre;
         
         map.set(obj.genre, genre);
       }

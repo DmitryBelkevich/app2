@@ -12,7 +12,7 @@ export default class GenresMapper {
     let i = 1;
     arr2.forEach((obj, index) => {
       const genre = new Genre();
-      set[index] = genre;
+      genre.id = i++;
     });
     console.log(arr2);
     

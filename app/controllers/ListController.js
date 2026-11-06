@@ -1,22 +1,22 @@
 import Controller from './Controller.js';
 
-import SongDao from '../dao/SongDao.js';
+import GenreService from '../services/GenreService.js';
 import ListView from '../views/ListView.js';
 
 export default class ListController extends Controller {
-  #songDao;
-  #songs;
+  #genreService;
+  #genres;
   #listView;
 
   constructor() {
     super();
-    this.#songDao = new SongDao();
+    this.#genreService = new GenreService();
   }
 
   async init() {
-    this.#songs = await this.#songDao.getAll();
+    this.#genres = await this.#genreService.getAll();
     this.#listView = new ListView();
 
-    console.log(this.#songs);
+    console.log(this.#genres);
   }
 }

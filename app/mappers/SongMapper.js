@@ -15,6 +15,8 @@ export default class SongMapper {
   #map(obj) {
     const song = new SongBuilder()
       .buildId(obj.id)
+      .buildBand(obj.band)
+      .buildTitle(obj.title)
       .build();
     
     return song;

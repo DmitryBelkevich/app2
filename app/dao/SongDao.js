@@ -16,12 +16,12 @@ export default class SongDao {
 
   async getAll() {
     const arr = await this.#apiAdapter.load("https://dmitrybelkevich.github.io/app3/api/songs");
-    const arr;
+    return arr;
   }
 
   async getById(id) {
     const obj = await this.#apiAdapter.load("https://dmitrybelkevich.github.io/app3/api/songs?id=" + id);
-    const obj;
+    return obj;
   }
   
   // async getAll() {

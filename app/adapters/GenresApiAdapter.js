@@ -24,7 +24,7 @@ export default class GenresApiAdapter {
     let i = 1;
     for (const song of songs) {
       if (map.has(song.genre))
-        break;
+        continue;
 
       const genre = {};
 

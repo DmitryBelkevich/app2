@@ -16,7 +16,7 @@ export default class GenresApiAdapter {
 
     console.log(genres);
     
-    return genres;
+    return [];
   }
 
   #createGenres(songs) {

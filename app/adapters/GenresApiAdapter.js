@@ -13,9 +13,8 @@ export default class GenresApiAdapter {
     const songs = await this.#jsonLoader.load(path);
     
     const genres = this.#createGenres(songs);
-    console.log(genres);
     
-    return [];
+    return genres;
   }
 
   #createGenres(songs) {
@@ -30,21 +29,10 @@ export default class GenresApiAdapter {
 
       genre.id = i++;
       genre.title = song.genre;
+      genre.songs = [];
       
       map.set(song.genre, genre);
     }
-
-    // let i = 1;
-    // songs.forEach(song => {
-    //   if ()
-    //     break;
-    //   const genre = {};
-
-    //   genre.id = i++;
-    //   genre.title = song.genre;
-      
-    //   map.set(song.genre, genre);
-    // });
     
     return Array.from(map.values());
   }

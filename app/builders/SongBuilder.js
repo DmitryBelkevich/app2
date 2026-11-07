@@ -27,6 +27,10 @@ export default class SongBuilder {
   }
 
   build() {
-    return null;
+    const song = new Song();
+
+    //
+    
+    return song;
   }
 }

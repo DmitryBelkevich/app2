@@ -23,13 +23,12 @@ class SongApiAdapter {
   async load(path) {
     const arr = await this.#jsonLoader.load(path);//"https://dmitrybelkevich.github.io/app3/api/songs"
 
-    console.log(arr);
+    if (!path.includes("?id="))
+      return arr;
 
-    if (path.includes("?id=")) {
-      
-    }
+    const obj = arr.find(obj => obj.id == id) || null;
     
-    return null;
+    return obj;
   }
 }
 

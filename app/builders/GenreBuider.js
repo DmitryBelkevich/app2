@@ -22,6 +22,11 @@ export default class GenreBuider {
 
   build() {
     const genre = new Genre();
+
+    genre.id = this.#id;
+    genre.title = this.#title;
+    genre.songs = this.#songs;
+    
     return genre;
   }
 }

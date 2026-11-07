@@ -13,7 +13,9 @@ export default class SongMapper {
   }
 
   #map(obj) {
-    const song = new SongBuilder().build();
+    const song = new SongBuilder()
+      .buildId(obj.id)
+      .build();
     
     return song;
   }

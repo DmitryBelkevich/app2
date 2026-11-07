@@ -13,18 +13,16 @@ export default class SongDao {
 
   async getAll() {
     const arr = await this.#adapter.load("https://dmitrybelkevich.github.io/app3/api/songs");
-
-    const mapper = new SongMapper();
-    const songs = mapper.read(arr);
+    
+    const songs = this.#mapper.read(arr);
     
     return songs;
   }
 
   async getById(id) {
     const obj = await this.#adapter.load("https://dmitrybelkevich.github.io/app3/api/songs?id=" + id);
-
-    const mapper = new SongMapper();
-    const song = mapper.read(obj);
+    
+    const song = this.#mapper.read(obj);
     
     return song;
   }

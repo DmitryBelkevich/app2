@@ -27,9 +27,7 @@ class SongApiAdapter {
       return arr;
     
     const id = path.slice(path.indexOf("?id=") + "?id=".length);
-    
     const obj = arr.find(obj => obj.id == id) || null;//"https://dmitrybelkevich.github.io/app3/api/songs?id=1"
-    console.log(obj);
     
     return obj;
   }

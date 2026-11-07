@@ -1,1 +1,4 @@
-export default class GenreBuider {}
+export default class GenreBuider {
+  #id;
+  #title;
+}

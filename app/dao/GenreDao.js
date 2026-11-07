@@ -4,9 +4,11 @@ import GenreMapper from '../mappers/GenreMapper.js';
 
 export default class GenreDao {
   #adapter;
+  #mapper;
 
   constructor() {
     this.#adapter = new ApiAdapter();
+    this.#mapper = new GenreMapper();
   }
   
   async getAll() {

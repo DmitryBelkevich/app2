@@ -29,7 +29,10 @@ export default class SongBuilder {
   build() {
     const song = new Song();
 
-    //
+    song.id = this.#id;
+    song.band = this.#band;
+    song.title = this.#title;
+    song.genre = this.#genre;
     
     return song;
   }

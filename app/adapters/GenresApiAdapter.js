@@ -24,16 +24,15 @@ export default class GenresApiAdapter {
 
     let i = 1;
     for (const song of songs) {
-      if (map.has(song.genre))
-        continue;
+      if (!map.has(song.genre)) {
+        const genre = {};
 
-      const genre = {};
-
-      genre.id = i++;
-      genre.title = song.genre;
-      genre.songs = [];
-      
-      map.set(song.genre, genre);
+        genre.id = i++;
+        genre.title = song.genre;
+        genre.songs = [];
+        
+        map.set(song.genre, genre);
+      }
     }
     
     return Array.from(map.values());

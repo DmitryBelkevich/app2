@@ -23,6 +23,6 @@ export default class GenresApiAdapter {
     
     arr.forEach(obj => set.push(obj.genre));
     
-    return set;
+    return Array.from(set);
   }
 }

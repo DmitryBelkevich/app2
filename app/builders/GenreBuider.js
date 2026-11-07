@@ -8,4 +8,8 @@ export default class GenreBuider {
   buildTitle(title) {}
 
   buildSongs(songs) {}
+
+  build() {
+    return null;
+  }
 }

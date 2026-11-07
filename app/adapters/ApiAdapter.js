@@ -1,5 +1,6 @@
 export default class ApiAdapter {
-  load(path) {
-    return path.replace("api/genres", "api/songs");
+  async load(path) {
+    const result = path.replace("api/genres", "api/songs");
+    return null;
   }
 }

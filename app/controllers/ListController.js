@@ -1,6 +1,6 @@
 import Controller from './Controller.js';
 
-import SongService from '../services/SongService.js';
+import GenreService from '../services/GenreService.js';
 import ListView from '../views/ListView.js';
 
 export default class ListController extends Controller {
@@ -10,7 +10,7 @@ export default class ListController extends Controller {
 
   constructor() {
     super();
-    this.#genreService = new SongService();
+    this.#genreService = new GenreService();
   }
 
   async init() {

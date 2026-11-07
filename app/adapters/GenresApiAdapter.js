@@ -22,14 +22,29 @@ export default class GenresApiAdapter {
     const map = new Map();
 
     let i = 1;
-    songs.forEach(song => {
+    for (const song of songs) {
+      if (map.has(song.genre))
+        break;
+
       const genre = {};
 
       genre.id = i++;
       genre.title = song.genre;
       
       map.set(song.genre, genre);
-    });
+    }
+
+    // let i = 1;
+    // songs.forEach(song => {
+    //   if ()
+    //     break;
+    //   const genre = {};
+
+    //   genre.id = i++;
+    //   genre.title = song.genre;
+      
+    //   map.set(song.genre, genre);
+    // });
     
     return Array.from(map.values());
   }

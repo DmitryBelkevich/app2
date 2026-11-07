@@ -4,11 +4,23 @@ export default class SongBuilder {
   #title;
   #genre;
 
-  buildId(id) {}
+  buildId(id) {
+    this.#id = id;
+    return this;
+  }
 
-  buildBand(band) {}
+  buildBand(band) {
+    this.#band = band;
+    return this;
+  }
 
-  buildTitle(title) {}
+  buildTitle(title) {
+    this.#title = title;
+    return this;
+  }
 
-  buildGenre(genre) {}
+  buildGenre(genre) {
+    this.#genre = genre;
+    return this;
+  }
 }

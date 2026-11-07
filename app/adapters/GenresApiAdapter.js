@@ -7,7 +7,7 @@ export default class GenresApiAdapter {
     this.#jsonLoader = new JsonLoader();
   }
   
-  async load(path) {
+  async load(path) {// "https://dmitrybelkevich.github.io/app3/api/genres
     // const result = path.replace("api/genres", "api/songs");
     return null;
   }

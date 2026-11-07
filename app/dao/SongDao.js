@@ -1,6 +1,6 @@
-import SongMapper from '../mappers/SongMapper.js';
-
 import ApiAdapter from '../adapters/ApiAdapter.js';
+
+import SongMapper from '../mappers/SongMapper.js';
 
 export default class SongDao {
   #adapter;

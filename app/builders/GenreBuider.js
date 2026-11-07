@@ -3,11 +3,18 @@ export default class GenreBuider {
   #title;
   #songs = [];
 
-  buildId(id) {}
+  buildId(id) {
+    this.#id = id;
+    return this;
+  }
 
-  buildTitle(title) {}
+  buildTitle(title) {
+    return this;
+  }
 
-  buildSongs(songs) {}
+  buildSongs(songs) {
+    return this;
+  }
 
   build() {
     return null;

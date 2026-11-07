@@ -13,16 +13,17 @@ export default class GenreDao {
   }
   
   async getAll() {
-    const arr = new ApiAdapter(await this.#jsonLoader.load("https://dmitrybelkevich.github.io/app3/api/songs")); // GET api/genres
+    const adapter = new ApiAdapter();
+    const arr = await this.#jsonLoader.load(adapter.load("https://dmitrybelkevich.github.io/app3/api/genres")); // GET api/genres
 
-    const mapper = new GenresMapper();
+    const mapper = new GenresMapper();console.log(arr);
     const genres = mapper.read(arr);
 
     return genres;
   }
 
   async getById(id) {
-    const arr = await this.#jsonLoader.load("https://dmitrybelkevich.github.io/app3/api/songs/?id=" + id); // GET api/genres/?id=:id
+    const arr = await this.#jsonLoader.load("https://dmitrybelkevich.github.io/app3/api/genres/?id=" + id); // GET api/genres/?id=:id
     const obj = arr.find(obj => obj.id == id) || null;
 
     const mapper = new GenreMapper();

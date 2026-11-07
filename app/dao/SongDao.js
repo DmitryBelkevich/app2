@@ -1,5 +1,4 @@
 import SongMapper from '../mappers/SongMapper.js';
-import SongsMapper from '../mappers/SongsMapper.js';
 
 import ApiAdapter from '../adapters/ApiAdapter.js';
 
@@ -13,7 +12,8 @@ export default class SongDao {
   async getAll() {
     const arr = await this.#adapter.load("https://dmitrybelkevich.github.io/app3/api/songs");
 
-    const songs = [];
+    const mapper = new SongMapper();
+    const songs = mapper.read(arr);
     
     return songs;
   }
@@ -21,7 +21,8 @@ export default class SongDao {
   async getById(id) {
     const obj = await this.#adapter.load("https://dmitrybelkevich.github.io/app3/api/songs?id=" + id);
 
-    const song = null;
+    const mapper = new SongMapper();
+    const song = mapper.read(obj);
     
     return song;
   }

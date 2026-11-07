@@ -1,5 +1,5 @@
 export default class ApiAdapter {
-  constructor(obj) {
-    
+  load(path) {
+    return path.replace("api/genres", "api/songs");
   }
 }

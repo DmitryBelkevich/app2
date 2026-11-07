@@ -7,6 +7,7 @@ import ListView from '../views/ListView.js';
 export default class ListController extends Controller {
   #songService;
   #genreService;
+  #songs;
   #genres;
   #listView;
 

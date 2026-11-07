@@ -1,3 +1,5 @@
+import Genre from '../models/Genre.js';
+
 export default class GenreBuider {
   #id;
   #title;

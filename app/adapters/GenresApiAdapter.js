@@ -12,17 +12,21 @@ export default class GenresApiAdapter {
 
     const arr = await this.#jsonLoader.load(path);
     
-    const arr2 = this.#createGenresarr(arr);
-    console.log(arr2);
+    const genres = this.#createGenresarr(arr);
+    console.log(genres);
     
     return [];
   }
 
-  #createGenresarr(arr) {
-    const set = new Set();
+  #createGenresarr(songs) {
+    const map = new Map();
     
-    arr.forEach(obj => set.add(obj.genre));
+    songs.forEach(song => {
+      const genre = {};
+      genre.title = song.genre;
+      map.set(song.genre, genre);
+    });
     
-    return Array.from(set);
+    return Array.from(map.values());
   }
 }

@@ -2,29 +2,9 @@ import Song from '../models/Song.js';
 import Genre from '../models/Genre.js';
 
 export default class SongMapper {
-  read(obj) {
-    if (!obj)
-      return null;
+  read(data) {
+    console.log(data);
     
-    const song = new Song();
-
-    song.id = obj.id;
-    song.title = obj.title;
-    song.band = obj.band;
-    
-    // song.genre = this.#createGenre(obj);
-    
-    return song;
+    return null;
   }
-
-  // #index = 1;
-
-  // #createGenre(obj) {
-  //   const genre = new Genre();
-
-  //   genre.id = this.#index++;
-  //   genre.title = obj.genre;
-    
-  //   return genre;
-  // }
 }

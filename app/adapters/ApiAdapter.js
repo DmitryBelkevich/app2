@@ -1,5 +1,5 @@
 import SongApiAdapter from './SongApiAdapter.js';
-import GenreApiAdapte from './GenreApiAdapte.js';
+import GenreApiAdapter from './GenreApiAdapter.js';
 
 export default class ApiAdapter {
   #adapter;

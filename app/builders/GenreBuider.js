@@ -21,6 +21,7 @@ export default class GenreBuider {
   }
 
   build() {
-    return null;
+    const genre = new Genre();
+    return genre;
   }
 }

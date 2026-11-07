@@ -1,18 +1,20 @@
-import ApiAdapter from '../adapters/ApiAdapter.js';
+import JsonLoader from '../loaders/JsonLoader.js';
+
+import SongApiAdapter from '../adapters/SongApiAdapter.js';
 
 import SongMapper from '../mappers/SongMapper.js';
 
 export default class SongDao {
-  #adapter;
+  #jsonLoader;
   #mapper;
 
   constructor() {
-    this.#adapter = new ApiAdapter();
+    this.#jsonLoader = new JsonLoader();
     this.#mapper = new SongMapper();
   }
 
   async getAll() {
-    const arr = await this.#adapter.load("https://dmitrybelkevich.github.io/app3/api/songs");
+    const arr = await this.#jsonLoader.load("https://dmitrybelkevich.github.io/app3/api/songs");
     
     const songs = this.#mapper.read(arr);
     
@@ -20,7 +22,7 @@ export default class SongDao {
   }
 
   async getById(id) {
-    const obj = await this.#adapter.load("https://dmitrybelkevich.github.io/app3/api/songs?id=" + id);
+    const obj = await new SongApiAdapter().load("https://dmitrybelkevich.github.io/app3/api/songs?id=" + id);
     
     const song = this.#mapper.read(obj);
     

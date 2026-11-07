@@ -19,10 +19,10 @@ export default class ListController extends Controller {
 
   async init() {
     this.#songs = await this.#songService.getAll();
-    this.#genres = await this.#genreService.getAll();
+    // this.#genres = await this.#genreService.getAll();
     this.#listView = new ListView();
 
     console.log(this.#songs);
-    console.log(this.#genres);
+    // console.log(this.#genres);
   }
 }

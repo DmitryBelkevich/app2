@@ -11,8 +11,18 @@ export default class GenresApiAdapter {
     path = path.replace("api/genres", "api/songs");// "https://dmitrybelkevich.github.io/app3/api/songs
 
     const arr = await this.#jsonLoader.load(path);
-    console.log(arr);
+    
+    const arr = this.#createGenresarr(arr);
+    console.log(arr2);
     
     return [];
+  }
+
+  #createGenresarr(arr) {
+    const set = new Set();
+    
+    arr.forEach(obj => set.push(obj.genre));
+    
+    return set;
   }
 }

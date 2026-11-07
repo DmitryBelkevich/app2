@@ -10,7 +10,7 @@ export default class ApiAdapter {
     else if (path.includes("/api/genres"))
       this.#adapter = new GenreApiAdapter();
 
-    const data = await this.#adapter.load(path)
+    const data = await this.#adapter.load(path);
     
     return data;
   }

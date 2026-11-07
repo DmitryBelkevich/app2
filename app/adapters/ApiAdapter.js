@@ -21,7 +21,14 @@ class SongApiAdapter {
   }
   
   async load(path) {
-    const arr = await this.#jsonLoader.load("https://dmitrybelkevich.github.io/app3/api/songs");
+    const arr = await this.#jsonLoader.load(path);//"https://dmitrybelkevich.github.io/app3/api/songs"
+
+    console.log(arr);
+
+    if (path.includes("?id=")) {
+      
+    }
+    
     return null;
   }
 }

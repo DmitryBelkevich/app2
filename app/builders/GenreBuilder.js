@@ -1,6 +1,6 @@
 import Genre from '../models/Genre.js';
 
-export default class GenreBuider {
+export default class GenreBuilder {
   #id;
   #title;
   #songs = [];

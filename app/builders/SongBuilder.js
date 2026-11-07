@@ -23,4 +23,8 @@ export default class SongBuilder {
     this.#genre = genre;
     return this;
   }
+
+  build() {
+    return null;
+  }
 }

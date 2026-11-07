@@ -1,1 +1,5 @@
-export default class SongBuilder {}
+export default class SongBuilder {
+  #id;
+  #title;
+  #genre;
+}

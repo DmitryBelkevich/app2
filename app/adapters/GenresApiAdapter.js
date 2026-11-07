@@ -20,10 +20,14 @@ export default class GenresApiAdapter {
 
   #createGenres(songs) {
     const map = new Map();
-    
+
+    let i = 1;
     songs.forEach(song => {
       const genre = {};
+
+      genre.id = i++;
       genre.title = song.genre;
+      
       map.set(song.genre, genre);
     });
     

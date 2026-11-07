@@ -4,9 +4,11 @@ import SongMapper from '../mappers/SongMapper.js';
 
 export default class SongDao {
   #adapter;
+  #mapper;
 
   constructor() {
     this.#adapter = new ApiAdapter();
+    this.#mapper = new SongMapper();
   }
 
   async getAll() {

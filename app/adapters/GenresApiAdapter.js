@@ -21,7 +21,7 @@ export default class GenresApiAdapter {
   #createGenresarr(arr) {
     const set = new Set();
     
-    arr.forEach(obj => set.push(obj.genre));
+    arr.forEach(obj => set.add(obj.genre));
     
     return Array.from(set);
   }

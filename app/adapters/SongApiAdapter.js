@@ -18,4 +18,12 @@ export default class SongApiAdapter {
     
     return obj;
   }
+
+  getAll() {
+    return null;
+  }
+
+  getById(id) {
+    return null;
+  }
 }

@@ -12,7 +12,7 @@ export default class GenresApiAdapter {
 
     const arr = await this.#jsonLoader.load(path);
     
-    const arr = this.#createGenresarr(arr);
+    const arr2 = this.#createGenresarr(arr);
     console.log(arr2);
     
     return [];

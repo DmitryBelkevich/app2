@@ -13,7 +13,7 @@ export default class GenreDao {
   }
   
   async getAll() {
-    const arr = await this.#jsonLoader.load("https://dmitrybelkevich.github.io/app3/api/songs"); // GET api/genres
+    const arr = new ApiAdapter(await this.#jsonLoader.load("https://dmitrybelkevich.github.io/app3/api/songs")); // GET api/genres
 
     const mapper = new GenresMapper();
     const genres = mapper.read(arr);

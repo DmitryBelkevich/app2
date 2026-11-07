@@ -6,30 +6,25 @@ import GenresMapper from '../mappers/GenresMapper.js';
 import ApiAdapter from '../adapters/ApiAdapter.js';
 
 export default class GenreDao {
-  #jsonLoader;
   #adapter;
 
   constructor() {
-    this.#jsonLoader = new JsonLoader();
     this.#adapter = new ApiAdapter();
   }
   
   async getAll() {
-    const arr = await this.#jsonLoader.load(adapter.load("https://dmitrybelkevich.github.io/app3/api/genres")); // GET api/genres
+    const arr = await this.#apiAdapter.load("https://dmitrybelkevich.github.io/app3/api/genres");
 
-    const mapper = new GenresMapper();console.log(arr);
-    const genres = mapper.read(arr);
-
+    const genres = [];
+    
     return genres;
   }
 
   async getById(id) {
-    const arr = await this.#jsonLoader.load(adapter.load("https://dmitrybelkevich.github.io/app3/api/genres/?id=" + id)); // GET api/genres/?id=:id
-    const obj = arr.find(obj => obj.id == id) || null;
+    const obj = await this.#apiAdapter.load("https://dmitrybelkevich.github.io/app3/api/genres?id=" + id);
 
-    const mapper = new GenreMapper();
-    const genre = mapper.read(obj);
-
+    const genre = null;
+    
     return genre;
   }
 }

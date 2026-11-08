@@ -1,4 +1,4 @@
-import GenreBuilder from '../../builders/GenreBuilder.js';
+import GenreBuilder from '../../models/builders/GenreBuilder.js';
 
 export default class GenreMapper {
   read(data) {

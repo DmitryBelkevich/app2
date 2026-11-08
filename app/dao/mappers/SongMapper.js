@@ -10,6 +10,8 @@ export default class SongMapper {
     //   data[index] = this.#map(obj);
     // });
 
+    console.log(data);
+
     return null;//data;
   }
 

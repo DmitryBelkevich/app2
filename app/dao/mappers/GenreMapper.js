@@ -1,4 +1,4 @@
-import GenreBuilder from '../../models/builders/GenreBuilder.js';
+import Genre from '../../models/Genre.js';
 
 export default class GenreMapper {
   read(data) {
@@ -13,10 +13,10 @@ export default class GenreMapper {
   }
 
   #map(obj) {
-    const genre = new GenreBuilder()
-      .buildId(obj.id)
-      .buildTitle(obj.title)
-      .build();
+    const genre = new Genre()
+
+    genre.id = obj.id;
+    genre.title = obj.title;
     
     return genre;
   }

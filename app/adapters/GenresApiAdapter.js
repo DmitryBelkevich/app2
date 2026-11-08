@@ -36,6 +36,13 @@ export default class GenresApiAdapter {
         map.set(song.genre, genre);
       }
     }
+
+    // 2
+    for (const song of songs) {
+      const str = song.genre;
+      const genre = map.get(str);
+      genre.songs.push(song);
+    }
     
     return Array.from(map.values());
   }

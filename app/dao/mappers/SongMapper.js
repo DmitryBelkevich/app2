@@ -20,7 +20,9 @@ export default class SongMapper {
   }
 
   #createGenres(songs) {
-    return null;
+    const genres = new Map();
+    
+    return genres;
   }
 
   #map(obj) {

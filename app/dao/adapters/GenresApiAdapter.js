@@ -1,4 +1,4 @@
-import JsonLoader from '../loaders/JsonLoader.js';
+import JsonLoader from '../../loaders/JsonLoader.js';
 
 export default class GenresApiAdapter {
   #jsonLoader;

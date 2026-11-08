@@ -19,7 +19,10 @@ export default class SongMapper {
     song.id = obj.id;
     song.band = obj.band;
     song.title = obj.title;
-    song.genre = new Genre();
+    
+    const genre = new Genre();
+    
+    song.genre = genre;
     
     return song;
   }

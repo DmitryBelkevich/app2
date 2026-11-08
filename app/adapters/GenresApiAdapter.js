@@ -11,9 +11,6 @@ export default class GenresApiAdapter {
     path = path.replace("api/genres", "api/songs");// "https://dmitrybelkevich.github.io/app3/api/songs
 
     const songs = await this.#jsonLoader.load(path);
-
-    console.log(songs);
-    
     const genres = this.#createGenres(songs);
 
     console.log(genres);
@@ -22,28 +19,27 @@ export default class GenresApiAdapter {
   }
 
   #createGenres(songs) {
-    const map = new Map();
+    const genres = new Map();
 
-    let i = 1;
+    let id = 1;
     for (const song of songs) {
-      if (!map.has(song.genre)) {
+      if (!genres.has(song.genre)) {
         const genre = {};
 
-        genre.id = i++;
+        genre.id = id++;
         genre.title = song.genre;
         genre.songs = [];
         
-        map.set(song.genre, genre);
+        genres.set(song.genre, genre);
       }
     }
 
-    // 2
+    // fill genre.songs
     for (const song of songs) {
-      const str = song.genre;
-      const genre = map.get(str);
+      const genre = genres.get(song.genre);
       genre.songs.push(song);
     }
     
-    return Array.from(map.values());
+    return Array.from(genres.values());
   }
 }

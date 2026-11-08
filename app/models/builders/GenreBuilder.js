@@ -1,4 +1,4 @@
-import Genre from '../models/Genre.js';
+import Genre from '../Genre.js';
 
 export default class GenreBuilder {
   #id;

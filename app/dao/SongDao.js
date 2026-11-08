@@ -2,7 +2,7 @@ import JsonLoader from '../loaders/JsonLoader.js';
 
 import SongApiAdapter from '../adapters/SongApiAdapter.js';
 
-import SongMapper from '../mappers/SongMapper.js';
+import SongMapper from './mappers/SongMapper.js';
 
 export default class SongDao {
   #jsonLoader;

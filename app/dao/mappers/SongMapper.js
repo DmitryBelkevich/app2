@@ -1,4 +1,4 @@
-import SongBuilder from '../../builders/SongBuilder.js';
+import SongBuilder from '../../models/builders/SongBuilder.js';
 
 export default class SongMapper {
   read(data) {

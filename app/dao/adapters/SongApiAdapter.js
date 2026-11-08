@@ -8,11 +8,16 @@ export default class SongApiAdapter {
   }
   
   async load(path) {//"https://dmitrybelkevich.github.io/app3/api/songs?id=1"
-    const id = path.slice(path.indexOf("?id=") + "?id=".length);
+    const id = this.#getId(path);
     
     const songs = await this.#jsonLoader.load(path);
     const song = songs.find(song => song.id == id) || null;
     
     return song;
+  }
+
+  #getId(path) {
+    const id = path.slice(path.indexOf("?id=") + "?id=".length);
+    return id;
   }
 }

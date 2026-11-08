@@ -12,7 +12,15 @@ export default class SongMapper {
 
     console.log(data);
 
+    const genres = this.#createGenres(data);
+
+    console.log(genres);
+
     return null;//data;
+  }
+
+  #createGenres(songs) {
+    return null;
   }
 
   #map(obj) {

@@ -1,4 +1,4 @@
-import SongBuilder from '../../models/builders/SongBuilder.js';
+import Song from '../../models/Song.js';
 
 export default class SongMapper {
   read(data) {
@@ -13,11 +13,11 @@ export default class SongMapper {
   }
 
   #map(obj) {
-    const song = new SongBuilder()
-      .buildId(obj.id)
-      .buildBand(obj.band)
-      .buildTitle(obj.title)
-      .build();
+    const song = new Song();
+
+    song.id = obj.id;
+    song.band = obj.band;
+    song.title = obj.title;
     
     return song;
   }

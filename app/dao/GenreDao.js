@@ -1,7 +1,7 @@
 import GenresApiAdapter from '../adapters/GenresApiAdapter.js';
 import GenreApiAdapter from '../adapters/GenreApiAdapter.js';
 
-import GenreMapper from '../mappers/GenreMapper.js';
+import GenreMapper from './mappers/GenreMapper.js';
 
 export default class GenreDao {
   #mapper;

@@ -1,4 +1,4 @@
-import Song from '../models/Song.js';
+import Song from '../Song.js';
 
 export default class SongBuilder {
   #id;

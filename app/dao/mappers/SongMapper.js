@@ -6,11 +6,11 @@ export default class SongMapper {
     if (!Array.isArray(data))
       return this.#map(data);
     
-    data.forEach((obj, index) => {
-      data[index] = this.#map(obj);
-    });
+    // data.forEach((obj, index) => {
+    //   data[index] = this.#map(obj);
+    // });
 
-    return data;
+    return null;//data;
   }
 
   #map(obj) {

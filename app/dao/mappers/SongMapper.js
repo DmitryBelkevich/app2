@@ -20,9 +20,22 @@ export default class SongMapper {
   }
 
   #createGenres(songs) {
-    const genres = new Map();
+    const map = new Map();
+
+    let id = 1;
+    for (const song of songs) {
+      if (!map.has(song.genre)) {
+        const genre = new Genre();
+
+        genre.id = id++;
+        genre.title = song.genre;
+        // genre.songs = [];
+        
+        map.set(song.genre, genre);
+      }
+    }
     
-    return genres;
+    return map;
   }
 
   #map(obj) {

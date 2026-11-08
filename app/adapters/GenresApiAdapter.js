@@ -11,6 +11,8 @@ export default class GenresApiAdapter {
     path = path.replace("api/genres", "api/songs");// "https://dmitrybelkevich.github.io/app3/api/songs
 
     const songs = await this.#jsonLoader.load(path);
+
+    console.log(songs);
     
     const genres = this.#createGenres(songs);
 
@@ -24,7 +26,6 @@ export default class GenresApiAdapter {
 
     let i = 1;
     for (const song of songs) {
-      console.log(song);
       if (!map.has(song.genre)) {
         const genre = {};
 

@@ -38,8 +38,9 @@ export default class GenresApiAdapter {
       genre.songs.push(song);
     }
 
+    console.log(genres);
     const a = Array.from(genres.values());
-    console.log(a);
+    
     
     return a;//Array.from(genres.values());
   }

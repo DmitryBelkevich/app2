@@ -12,29 +12,11 @@ export default class GenresApiAdapter {
 
     const songs = await this.#jsonLoader.load(path);
     
-    const genres = new Map();
+    const genres = this.#createGenres(songs);
 
-    let id = 1;
-    for (const song of songs) {
-      if (!genres.has(song.genre)) {
-        const genre = {};
-
-        genre.id = id++;
-        genre.title = song.genre;
-        genre.songs = [];
-        
-        genres.set(song.genre, genre);
-      }
-
-      // mapping
-      const genre = genres.get(song.genre);
-      genre.songs.push(song);
-    }
+    console.log(genres);
     
-    const a = Array.from(genres.values());
-    console.log(a);
-    
-    return [];//Array.from(genres.values());
+    return genres;
   }
 
   #createGenres(songs) {
@@ -56,11 +38,7 @@ export default class GenresApiAdapter {
       const genre = genres.get(song.genre);
       genre.songs.push(song);
     }
-
     
-    const a = Array.from(genres.values());
-    console.log(a);
-    
-    return a;//Array.from(genres.values());
+    return Array.from(genres.values());
   }
 }

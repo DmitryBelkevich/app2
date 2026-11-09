@@ -13,7 +13,7 @@ export default class GenresApiAdapter {
     const songs = await this.#jsonLoader.load(path);
     console.log(songs);
     const genres = this.#createGenres(songs);
-    console.log(genres);
+    // console.log(genres);
     
     return genres;
   }
@@ -43,6 +43,8 @@ export default class GenresApiAdapter {
       const genre = genres.get(song.genre);
       genre.songs.push(song);
     }
+
+    console.log(genres);
     
     return Array.from(genres.values());
   }

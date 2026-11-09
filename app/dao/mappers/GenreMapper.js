@@ -31,6 +31,7 @@ export default class GenreMapper {
         song.band = s.band;
         song.title = s.title;
         song.genre = genre;
+        song.raiting = s.raiting;
 
         // mapping
         genre.songs.push(song);

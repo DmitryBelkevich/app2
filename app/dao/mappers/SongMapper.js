@@ -55,30 +55,30 @@ export default class SongMapper {
     return songs;
   }
 
-  #createGenres(songs) {
-    const genres = new Map();
+  // #createGenres(songs) {
+  //   const genres = new Map();
 
-    let id = 1;
-    for (const song of songs) {
-      if (!genres.has(song.genre)) {
-        const genre = new Genre();
+  //   let id = 1;
+  //   for (const song of songs) {
+  //     if (!genres.has(song.genre)) {
+  //       const genre = new Genre();
 
-        genre.id = id++;
-        genre.title = song.genre;
-        // genre.songs = [];
+  //       genre.id = id++;
+  //       genre.title = song.genre;
+  //       // genre.songs = [];
         
-        genres.set(song.genre, genre);
-      }
-    }
+  //       genres.set(song.genre, genre);
+  //     }
+  //   }
 
-    // fill genre.songs
-    // for (const song of songs) {
-    //   const genre = genres.get(song.genre);
-    //   genre.songs.push(song);
-    // }
+  //   // fill genre.songs
+  //   // for (const song of songs) {
+  //   //   const genre = genres.get(song.genre);
+  //   //   genre.songs.push(song);
+  //   // }
     
-    return Array.from(genres.values());
-  }
+  //   return Array.from(genres.values());
+  // }
 
   #map(obj) {
     const song = new Song();
@@ -90,9 +90,11 @@ export default class SongMapper {
     const genre = new Genre();
 
     genre.id = 1;
-    
-    song.genre = genre;
     genre.title = obj.genre;
+
+    // mapping
+    song.genre = genre;
+    song.genre.songs.push(song);
     
     return song;
   }

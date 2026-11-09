@@ -4,6 +4,7 @@ export default class Song extends Model {
   #band;
   #title;
   #genre;
+  #raiting;
 
   get band() {
     return this.#band;
@@ -27,5 +28,13 @@ export default class Song extends Model {
 
   set genre(genre) {
     this.#genre = genre;
+  }
+
+  get raiting() {
+    return this.#raiting;
+  }
+
+  set raiting(raiting) {
+    this.#raiting = raiting;
   }
 }

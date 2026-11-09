@@ -22,7 +22,7 @@ export default class ListController extends Controller {
     this.#genres = await this.#genreService.getAll();
 
     // console.log(this.#songs);
-    // console.log(this.#genres);
+    console.log(this.#genres);
 
     this.#listView = new ListView();
   }

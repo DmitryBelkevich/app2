@@ -36,6 +36,7 @@ export default class GenreMapper {
       }
       
       // mapping
+      song.genre = genre;
 
       genres.push(genre);
     }

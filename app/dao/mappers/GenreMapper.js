@@ -41,7 +41,7 @@ export default class GenreMapper {
     }
     
     console.log(arr);
-    console.log(genres);
+    console.log(songs);
     
     return genres;
   }

@@ -5,7 +5,9 @@ import SongView from '../views/SongView.js';
 
 export default class SongController extends Controller {
   #songService;
+  
   #song;
+  
   #songView;
   
   constructor() {
@@ -15,8 +17,8 @@ export default class SongController extends Controller {
 
   async init() {
     this.#song = await this.#songService.getById(this._params.id);
-    this.#songView = new SongView();
-
     console.log(this.#song);
+
+    this.#songView = new SongView();
   }
 }

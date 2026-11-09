@@ -26,7 +26,10 @@ export default class SongMapper {
     
     for (const obj of arr) {
       const song = new Song();
-
+      
+      song.id = obj.id;
+      song.band = obj.band;
+      
       songs.push(song);
     }
     

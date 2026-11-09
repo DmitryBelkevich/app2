@@ -15,22 +15,35 @@ export default class SongMapper {
     const songs = this.#createSongs(data);
     console.log(songs);
 
-    const genres = this.#createGenres(data);
-    console.log(genres);
+    // const genres = this.#createGenres(data);
+    // console.log(genres);
 
     return null;//data;
   }
 
   #createSongs(arr) {
     const songs = [];
-    
+    const genres = new Map();
+
+    let id = 1;
     for (const obj of arr) {
       const song = new Song();
       
       song.id = obj.id;
       song.band = obj.band;
       song.title = obj.title;
-      // song.genre;
+
+      if (!genres.has(obj.genre)) {
+        const genre = new Genre();
+        
+        genre.id = id++;
+        genre.title = element.genre;
+        
+        genres.set(obj.genre, genre);
+      }
+
+      // mapping
+      song.genre = genres.get(obj.genre);
       
       songs.push(song);
     }

@@ -92,6 +92,7 @@ export default class SongMapper {
     genre.id = 1;
     
     song.genre = genre;
+    genre.title = obj.genre;
     
     return song;
   }

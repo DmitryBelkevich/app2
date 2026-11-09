@@ -13,7 +13,7 @@ export default class GenresMapper {
   }
 
   #createGenres(arr) {
-    
+    console.log(arr);
     
     return [];
   }

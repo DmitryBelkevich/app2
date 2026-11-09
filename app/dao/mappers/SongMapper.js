@@ -88,6 +88,8 @@ export default class SongMapper {
     song.title = obj.title;
     
     const genre = new Genre();
+
+    genre.id = 1;
     
     song.genre = genre;
     

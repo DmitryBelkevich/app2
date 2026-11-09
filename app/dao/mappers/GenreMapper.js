@@ -36,12 +36,13 @@ export default class GenreMapper {
       }
       
       // mapping
+      // genre.songs.push();
 
       genres.push(genre);
     }
     
     console.log(arr);
-    console.log(songs);
+    console.log(genres);
     
     return genres;
   }

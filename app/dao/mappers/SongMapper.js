@@ -55,10 +55,10 @@ export default class SongMapper {
     }
 
     // fill genre.songs
-    for (const song of songs) {
-      const genre = genres.get(song.genre);
-      genre.songs.push(song);
-    }
+    // for (const song of songs) {
+    //   const genre = genres.get(song.genre);
+    //   genre.songs.push(song);
+    // }
     
     return Array.from(genres.values());
   }

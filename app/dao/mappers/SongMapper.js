@@ -3,8 +3,8 @@ import Genre from '../../models/Genre.js';
 
 export default class SongMapper {
   read(data) {
-    // if (!Array.isArray(data))
-    //   return this.#map(data);
+    if (!Array.isArray(data))
+      return this.#map(data);
     
     // data.forEach((obj, index) => {
     //   data[index] = this.#map(obj);
@@ -17,11 +17,6 @@ export default class SongMapper {
 
     // const genres = this.#createGenres(data);
     // console.log(genres);
-
-    if (!Array.isArray(data)) {
-      const song = null;//songs.find(song => song.id == id) || null;
-      return song;
-    }
 
     return null;//data;
   }
@@ -85,17 +80,17 @@ export default class SongMapper {
     return Array.from(genres.values());
   }
 
-  // #map(obj) {
-  //   const song = new Song();
+  #map(obj) {
+    const song = new Song();
 
-  //   song.id = obj.id;
-  //   song.band = obj.band;
-  //   song.title = obj.title;
+    song.id = obj.id;
+    song.band = obj.band;
+    song.title = obj.title;
     
-  //   const genre = new Genre();
+    const genre = new Genre();
     
-  //   song.genre = genre;
+    song.genre = genre;
     
-  //   return song;
-  // }
+    return song;
+  }
 }

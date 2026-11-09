@@ -37,7 +37,7 @@ export default class SongMapper {
         const genre = new Genre();
         
         genre.id = id++;
-        genre.title = element.genre;
+        genre.title = obj.genre;
         
         genres.set(obj.genre, genre);
       }

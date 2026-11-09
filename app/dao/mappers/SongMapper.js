@@ -18,6 +18,11 @@ export default class SongMapper {
     // const genres = this.#createGenres(data);
     // console.log(genres);
 
+    if (!Array.isArray(data)) {
+      const song = songs.find(song => song.id == id) || null;
+      return song;
+    }
+
     return null;//data;
   }
 

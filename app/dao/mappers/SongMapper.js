@@ -27,7 +27,7 @@ export default class SongMapper {
     for (const obj of arr) {
       const song = new Song();
 
-      return song;
+      songs.push(song);
     }
     
     return songs;

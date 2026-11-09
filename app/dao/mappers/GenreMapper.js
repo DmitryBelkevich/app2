@@ -33,6 +33,8 @@ export default class GenreMapper {
         song.genre = genre;
 
         songs.set(s.id, song);
+
+        genre.songs.push(song);
       }
       
       // mapping

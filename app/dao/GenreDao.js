@@ -11,7 +11,7 @@ export default class GenreDao {
   }
   
   async getAll() {
-    const arr = await new GenresApiAdapter().load("https://dmitrybelkevich.github.io/app3/api/genres");
+    const arr = await new GenresApiAdapter().load("https://dmitrybelkevich.github.io/app2/api/genres");
 
     const genres = this.#mapper.read(arr);
     
@@ -19,7 +19,7 @@ export default class GenreDao {
   }
 
   async getById(id) {
-    const obj = await new GenreApiAdapter.load("https://dmitrybelkevich.github.io/app3/api/genres?id=" + id);
+    const obj = await new GenreApiAdapter.load("https://dmitrybelkevich.github.io/app2/api/genres?id=" + id);
 
     const genre = this.#mapper.read(obj);
     

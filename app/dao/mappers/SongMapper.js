@@ -29,6 +29,7 @@ export default class SongMapper {
       
       song.id = obj.id;
       song.band = obj.band;
+      song.title = obj.title;
       
       songs.push(song);
     }

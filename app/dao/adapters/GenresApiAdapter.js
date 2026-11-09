@@ -12,6 +12,7 @@ export default class GenresApiAdapter {
 
     const songs = await this.#jsonLoader.load(path);
     const genres = this.#createGenres(songs);
+    console.log(genres);
     
     return genres;
   }

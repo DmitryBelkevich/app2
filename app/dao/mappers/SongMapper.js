@@ -49,13 +49,11 @@ export default class SongMapper {
         
         genres.set(obj.genre, genre);
       }
-
-      // mapping
+      
       song.genre = genres.get(obj.genre);
       song.genre.songs.push(song);
-
-      // other
-      // song.raiting = obj.raiting;
+      
+      song.raiting = obj.raiting;
       
       songs.push(song);
     }

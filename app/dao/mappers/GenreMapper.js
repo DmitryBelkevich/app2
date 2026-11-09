@@ -10,12 +10,22 @@ export default class GenreMapper {
   }
 
   #createGenre(obj) {
+    // TODO
     return null;
   }
 
   #createGenres(arr) {
-    console.log(arr);
+    const genres = [];
+
+    for (const obj of arr) {
+      const genre = new Genre();
+
+      genres.push(genre);
+    }
     
-    return [];
+    console.log(arr);
+    console.log(genres);
+    
+    return genres;
   }
 }

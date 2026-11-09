@@ -1,6 +1,6 @@
 import Genre from '../models/Genre.js';
 
-export default class GenresMapper {
+export default class GenreMapper {
   read(data) {
     if (!Array.isArray(data))
       return this.#createGenre(data);

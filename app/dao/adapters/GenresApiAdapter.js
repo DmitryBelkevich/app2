@@ -36,7 +36,7 @@ export default class GenresApiAdapter {
       // mapping
       const genre = genres.get(song.genre);// TODO
       console.log(genre);
-      genre.songs.push(1);
+      genre.songs.push(song);
       // genre.songs.push(song);// fill genre.songs
     }
 

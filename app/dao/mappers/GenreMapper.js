@@ -20,6 +20,9 @@ export default class GenreMapper {
     for (const obj of arr) {
       const genre = new Genre();
 
+      genre.id = obj.id;
+      genre.title = obj.title;
+
       genres.push(genre);
     }
     

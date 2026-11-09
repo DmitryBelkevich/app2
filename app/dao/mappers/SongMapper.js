@@ -6,9 +6,7 @@ export default class SongMapper {
     if (!Array.isArray(data))
       return this.#createSong(data);
 
-    const songs = this.#createSongs(data);
-
-    return songs;
+    return this.#createSongs(data);
   }
 
   #createSong(obj) {

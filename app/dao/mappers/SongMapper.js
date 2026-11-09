@@ -2,9 +2,9 @@ import Song from '../../models/Song.js';
 import Genre from '../../models/Genre.js';
 
 export default class SongMapper {
-  console.log(data);
-  
   read(data) {
+    console.log(data);
+    
     if (!Array.isArray(data))
       return this.#map(data);
     

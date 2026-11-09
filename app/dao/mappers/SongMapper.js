@@ -44,6 +44,7 @@ export default class SongMapper {
 
       // mapping
       song.genre = genres.get(obj.genre);
+      song.genre.songs.push(song);
       
       songs.push(song);
     }

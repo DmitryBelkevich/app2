@@ -2,6 +2,8 @@ import Song from '../../models/Song.js';
 import Genre from '../../models/Genre.js';
 
 export default class SongMapper {
+  console.log(data);
+  
   read(data) {
     if (!Array.isArray(data))
       return this.#map(data);
@@ -9,8 +11,6 @@ export default class SongMapper {
     // data.forEach((obj, index) => {
     //   data[index] = this.#map(obj);
     // });
-
-    console.log(data);
 
     const songs = this.#createSongs(data);
     console.log(songs);

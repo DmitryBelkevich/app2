@@ -16,7 +16,7 @@ export default class GenreMapper {
 
   #createGenres(arr) {
     const genres = [];
-    const songs = new Map();
+    // const songs = new Map();
 
     for (const obj of arr) {
       const genre = new Genre();
@@ -35,7 +35,7 @@ export default class GenreMapper {
         // mapping
         genre.songs.push(song);
 
-        songs.set(s.id, song);
+        // songs.set(s.id, song);
       }
 
       genres.push(genre);

@@ -16,12 +16,15 @@ export default class GenreMapper {
 
   #createGenres(arr) {
     const genres = [];
+    const songs = new Map();
 
     for (const obj of arr) {
       const genre = new Genre();
 
       genre.id = obj.id;
       genre.title = obj.title;
+
+      // mapping
 
       genres.push(genre);
     }

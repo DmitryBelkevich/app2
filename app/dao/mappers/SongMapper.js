@@ -20,10 +20,11 @@ export default class SongMapper {
 
     genre.id = 1;
     genre.title = obj.genre;
-
-    // mapping
+    
     song.genre = genre;
     song.genre.songs.push(song);
+
+    song.raiting = obj.raiting;
     
     return song;
   }

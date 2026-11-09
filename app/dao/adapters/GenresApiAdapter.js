@@ -11,9 +11,9 @@ export default class GenresApiAdapter {
     path = path.replace("api/genres", "api/songs");// "https://dmitrybelkevich.github.io/app3/api/songs
 
     const songs = await this.#jsonLoader.load(path);
-    console.log(songs);
+    // console.log(songs);
     const genres = this.#createGenres(songs);
-    console.log(genres);
+    // console.log(genres);
     
     return genres;
   }
@@ -37,6 +37,8 @@ export default class GenresApiAdapter {
       const genre = genres.get(song.genre);
       genre.songs.push(song);
     }
+
+    console.log(genres);
     
     return Array.from(genres.values());
   }

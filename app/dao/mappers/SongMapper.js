@@ -34,6 +34,12 @@ export default class SongMapper {
         genres.set(song.genre, genre);
       }
     }
+
+    // fill genre.songs
+    for (const song of songs) {
+      const genre = genres.get(song.genre);
+      genre.songs.push(song);
+    }
     
     return Array.from(genres.values());
   }

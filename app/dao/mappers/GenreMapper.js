@@ -1,4 +1,4 @@
-import Genre from '../models/Genre.js';
+import Genre from '../../models/Genre.js';
 
 export default class GenreMapper {
   read(data) {

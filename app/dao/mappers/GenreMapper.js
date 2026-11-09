@@ -24,6 +24,17 @@ export default class GenreMapper {
       genre.id = obj.id;
       genre.title = obj.title;
 
+      for (const s of obj.songs) {
+        const song = new Song();
+
+        song.id = s.id;
+        song.band = s.band;
+        song.title = s.title;
+        // song.genre;
+
+        songs.set(s.id, song);
+      }
+      
       // mapping
 
       genres.push(genre);

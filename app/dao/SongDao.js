@@ -8,7 +8,7 @@ export default class SongDao {
   #jsonLoader;
   #mapper;
 
-  constructor() {
+  constructor( ) {
     this.#jsonLoader = new JsonLoader();
     this.#mapper = new SongMapper();
   }

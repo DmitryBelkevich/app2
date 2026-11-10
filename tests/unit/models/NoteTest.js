@@ -31,4 +31,17 @@ export default class NoteTest {
     // assert
     Assert.assertEquals("B", result, "A + 2 must be B");
   }
+
+  // test
+  testTransposeDown() {
+    // init
+    const note = new Note("A");
+
+    // action
+    note.transpose(-2);
+    const result = note.value;
+
+    // assert
+    Assert.assertEquals("G", result, "A - 2 must be G");
+  }
 }

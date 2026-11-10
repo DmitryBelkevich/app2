@@ -44,4 +44,17 @@ export default class NoteTest {
     // assert
     Assert.assertEquals("G", result, "A - 2 must be G");
   }
+
+  // test
+  testRespell() {
+    // init
+    const note = new Note("A#");
+
+    // action
+    note.respell();
+    const result = note.value;
+
+    // assert
+    Assert.assertEquals("Bb", result, "A# respell must be Bb");
+  }
 }

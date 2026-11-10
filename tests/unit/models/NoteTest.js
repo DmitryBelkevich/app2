@@ -13,10 +13,9 @@ export default class NoteTest {
     // action
     note.up();
     note.up();
-    const result = note.value;
 
     // assert
-    Assert.assertEquals("B", result, "A + up must be B");
+    Assert.assertEquals("B", note.value, "A + up must be B");
   }
 
   // test
@@ -26,10 +25,9 @@ export default class NoteTest {
 
     // action
     note.transpose(2);
-    const result = note.value;
 
     // assert
-    Assert.assertEquals("B", result, "A + 2 must be B");
+    Assert.assertEquals("B", note.value, "A + 2 must be B");
   }
 
   // test
@@ -39,10 +37,9 @@ export default class NoteTest {
 
     // action
     note.transpose(-2);
-    const result = note.value;
 
     // assert
-    Assert.assertEquals("G", result, "A - 2 must be G");
+    Assert.assertEquals("G", note.value, "A - 2 must be G");
   }
 
   // test
@@ -52,9 +49,8 @@ export default class NoteTest {
 
     // action
     note.respell();
-    const result = note.value;
 
     // assert
-    Assert.assertEquals("Bb", result, "A# respell must be Bb");
+    Assert.assertEquals("Bb", note.value, "A# respell must be Bb");
   }
 }

@@ -28,6 +28,6 @@ export default class NoteTest {
     const result = note.value;
 
     // assert
-    Assert.assertEquals("A#", result, "A + 2 must be B");
+    Assert.assertEquals("B", result, "A + 2 must be B");
   }
 }

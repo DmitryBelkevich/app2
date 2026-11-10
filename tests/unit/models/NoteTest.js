@@ -22,7 +22,7 @@ export default class NoteTest {
   // test
   testTransposeUp() {
     // init
-    const note = new Note("B");
+    const note = new Note("A");
 
     // action
     note.transpose(2);

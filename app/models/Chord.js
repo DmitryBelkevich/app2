@@ -9,6 +9,10 @@ export default class Chord {
 
   #bass;
 
+  constructor(value) {
+    // TODO
+  }
+
   get value() {
     return this.#value;
   }

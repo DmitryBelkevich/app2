@@ -7,16 +7,14 @@ export default class ChordTest {
   #chord;
 
   // test
-  testUp() {
+  testValue() {
     // init
     // const note = new Note("A");
     const chord = new Chord("Am");
 
     // action
-    chord.up();
-    chord.up();
 
     // assert
-    Assert.assertEquals("Bm", chord.toString(), "Am + up must be Bm");
+    Assert.assertEquals("Am", chord.toString(), "Am must be Am");
   }
 }

@@ -1,4 +1,5 @@
 export default class Note {
+  
   #value;
   
   constructor(value) {

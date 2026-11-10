@@ -11,7 +11,8 @@ export default class NoteTest {
     const note = new Note("A");
 
     // action
-    const result = note.up();
+    note.up();
+    const result = note.value;
 
     // assert
     Assert.assertEquals("A#", result, "A + up must be A#");

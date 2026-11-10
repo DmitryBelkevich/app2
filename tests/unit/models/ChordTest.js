@@ -1,7 +1,6 @@
 import Assert from '../../libs/tests/Assert.js';
 
 import Chord from '../../../app/models/Chord.js';
-// import Note from '../../../app/models/Note.js';
 
 export default class ChordTest {
   #chord;
@@ -9,7 +8,6 @@ export default class ChordTest {
   // test
   testValue() {
     // init
-    // const note = new Note("A");
     const chord = new Chord("Am");
 
     // action

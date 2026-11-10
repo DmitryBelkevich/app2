@@ -8,4 +8,12 @@ export default class Chord {
   #postfix = "";
 
   #bass;
+
+  get value() {
+    return this.#value;
+  }
+
+  set value(value) {
+    
+  }
 }

@@ -12,10 +12,11 @@ export default class NoteTest {
 
     // action
     note.up();
+    note.up();
     const result = note.value;
 
     // assert
-    Assert.assertEquals("A#", result, "A + up must be A#");
+    Assert.assertEquals("B", result, "A + up must be B");
   }
 
   // test

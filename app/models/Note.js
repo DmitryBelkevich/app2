@@ -110,4 +110,28 @@ export default class Note {
     else if (this.#value == "Ab")
       this.#value = "G";
   }
+
+  respell() {
+    if (this.#value == "A#")
+      this.#value = "Bb";
+    else if (this.#value == "C#")
+      this.#value = "Db";
+    else if (this.#value == "D#")
+      this.#value = "Eb";
+    else if (this.#value == "F#")
+      this.#value = "Gb";
+    else if (this.#value == "G#")
+      this.#value = "Ab";
+
+    else if (this.#value == "Bb")
+      this.#value = "A#";
+    else if (this.#value == "Db")
+      this.#value = "C#";
+    else if (this.#value == "Eb")
+      this.#value = "D#";
+    else if (this.#value == "Gb")
+      this.#value = "F#";
+    else if (this.#value == "Ab")
+      this.#value = "G#";
+  }
 }

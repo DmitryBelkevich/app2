@@ -14,6 +14,34 @@ export default class Chord {
   }
 
   set value(value) {
-    
+    // TODO
+  }
+
+  parser(value) {
+    // TODO
+  }
+
+  valueOf() {
+    return this.#value;
+  }
+
+  toString() {
+    return this.#value;
+  }
+
+  transpose(count) {
+    // TODO
+  }
+
+  up() {
+    // TODO
+  }
+
+  down() {
+    // TODO
+  }
+
+  respell() {
+    // TODO
   }
 }

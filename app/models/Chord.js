@@ -59,10 +59,25 @@ export default class Chord {
 
     value = value.split("/")[0];
 
-    // TODO
+    // note
     chars = value.split("");
+
+    const notes = ["A", "B", "C", "D", "E", "F", "G"];
+    const symbols = ["#", "b"];
+
+    var note = "";
+    index = 0;
+    for (const char of chars) {
+      if (notes.includes(char) || symbols.includes(char)) {
+        note += char;
+      } else
+        break;
+    }
+
+    this.#note = new Note(note);
     
     console.log(chars);
+    console.log(this);
   }
 
   valueOf() {

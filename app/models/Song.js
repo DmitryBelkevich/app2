@@ -6,6 +6,10 @@ export default class Song extends Model {
   #genre;
   #raiting;
 
+  #text;
+  #score;
+  #playback;
+
   get band() {
     return this.#band;
   }
@@ -36,5 +40,29 @@ export default class Song extends Model {
 
   set raiting(raiting) {
     this.#raiting = raiting;
+  }
+
+  get text() {
+    return this.#text;
+  }
+
+  set text(text) {
+    this.#text = text;
+  }
+
+  get score() {
+    return this.#score;
+  }
+
+  set score(score) {
+    this.#score = score;
+  }
+
+  get playback() {
+    return this.#playback;
+  }
+
+  set playback(playback) {
+    this.#playback = playback;
   }
 }

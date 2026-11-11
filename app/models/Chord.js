@@ -39,7 +39,7 @@ export default class Chord {
     chars = chars.slice(index);
 
     // postfix
-    let index = 0;
+    index = 0;
     for (const char of chars) {
       if (char == "." || char == "_") {
         this.#postfix += char;

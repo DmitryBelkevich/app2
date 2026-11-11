@@ -24,14 +24,14 @@ export default class Chord {
 
   #parser(value) {
     // TODO
-    const chars = value.split("");
+    var chars = value.split("");
 
-    let i = 0;
+    // let i = 0;
     for (const char of chars) {
       if (char == "." || char == "_") {
         this.#prefix += char;
-        i++;
-        chars.splice(1);
+        // i++;
+        chars = chars.slice(1)
       } else
         break;
     }

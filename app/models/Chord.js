@@ -10,8 +10,15 @@ export default class Chord {
   #postfix = "";
 
   constructor(value) {
-    // TODO
     this.#parser(value);
+
+    // builder
+    this.#value =
+      this.#prefix
+      + this.#note
+      + this.#body
+      + (this.#bass ? "/" + this.#bass : "")
+      + this.#postfix;
   }
 
   get value() {
@@ -82,14 +89,6 @@ export default class Chord {
     
     // body
     this.#body = value;
-
-    // builder
-    this.#value =
-      this.#prefix
-      + this.#note
-      + this.#body
-      + (this.#bass ? "/" + this.#bass : "")
-      + this.#postfix;
   }
 
   valueOf() {

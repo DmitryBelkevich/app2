@@ -17,14 +17,16 @@ export default class SongMapper {
     song.title = obj.title;
     
     const genre = new Genre();
-
-    genre.id = 1;
-    genre.title = obj.genre;
+      genre.id = 1;
+      genre.title = obj.genre;
     
     song.genre = genre;
     song.genre.songs.push(song);
 
     song.raiting = obj.raiting;
+    song.text = obj.text;
+    song.score = obj.score;
+    song.playback = obj.playback;
     
     return song;
   }
@@ -54,6 +56,9 @@ export default class SongMapper {
       song.genre.songs.push(song);
       
       song.raiting = obj.raiting;
+      song.text = obj.text;
+      song.score = obj.score;
+      song.playback = obj.playback;
       
       songs.push(song);
     }

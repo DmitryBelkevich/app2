@@ -11,6 +11,7 @@ export default class Chord {
 
   constructor(value) {
     // TODO
+    this.#parser(value);
   }
 
   get value() {

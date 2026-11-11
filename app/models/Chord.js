@@ -28,9 +28,10 @@ export default class Chord {
 
     let i = 0;
     for (const char of chars) {
-      if (char == "." || char == "_") {
+      if (char == "." || char == "_")
         this.#prefix += char;
-      }
+      else
+        break;
     }
 
     console.log(this.#prefix);

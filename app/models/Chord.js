@@ -24,6 +24,7 @@ export default class Chord {
 
   #parser(value) {
     // TODO
+    console.log(value);
   }
 
   valueOf() {

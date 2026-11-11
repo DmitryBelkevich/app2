@@ -3,7 +3,9 @@ export default class SongView {
     console.log(this);
 
     for (let i = 0; i < 1000; i++) {
-      document.body.textContent += i;
+      const div = document.createElement("div");
+      div.textContent = i;
+      document.body.append(div);
     }
   }
 }

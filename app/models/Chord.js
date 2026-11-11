@@ -70,9 +70,11 @@ export default class Chord {
     for (const char of chars) {
       if (notes.includes(char) || symbols.includes(char)) {
         note += char;
+        index++;
       } else
         break;
     }
+    chars = chars.slice(index);
 
     this.#note = new Note(note);
     

@@ -24,7 +24,17 @@ export default class Chord {
 
   #parser(value) {
     // TODO
-    console.log(value);
+    const chars = value.split("");
+
+    let i = 0;
+    for (const char of chars) {
+      if (char == "." || char == "_") {
+        
+      }
+      this.#prefix += char;
+    }
+
+    console.log(this.#prefix);
   }
 
   valueOf() {

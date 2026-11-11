@@ -77,9 +77,11 @@ export default class Chord {
     chars = chars.slice(index);
 
     this.#note = new Note(note);
+
+    value = chars.join("");
     
-    console.log(chars);
-    console.log(this);
+    // body
+    this.#body = value;
   }
 
   valueOf() {

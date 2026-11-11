@@ -26,17 +26,27 @@ export default class Chord {
     // TODO
     var chars = value.split("");
 
-    // let i = 0;
     for (const char of chars) {
       if (char == "." || char == "_") {
         this.#prefix += char;
-        // i++;
         chars = chars.slice(1)
       } else
         break;
     }
 
+    let index = 0;
+    for (const char of chars) {
+      if (char == "." || char == "_") {
+        this.#postfix += char;
+      } else {
+        index++;
+      }
+    }
+
+    chars = chars.slice(0, index);
+
     console.log(this.#prefix);
+    console.log(this.#postfix);
     console.log(chars);
   }
 

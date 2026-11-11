@@ -70,6 +70,10 @@ export default class Note {
       this.#value = "G";
     else if (this.#value == "Ab")
       this.#value = "A";
+
+    // TODO
+    // ##
+    // bb
   }
 
   down() {
@@ -109,6 +113,10 @@ export default class Note {
       this.#value = "F";
     else if (this.#value == "Ab")
       this.#value = "G";
+
+    // TODO
+    // ##
+    // bb
   }
 
   respell() {
@@ -133,5 +141,9 @@ export default class Note {
       this.#value = "F#";
     else if (this.#value == "Ab")
       this.#value = "G#";
+
+    // TODO
+    // ##
+    // bb
   }
 }

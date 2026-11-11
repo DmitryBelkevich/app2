@@ -114,27 +114,51 @@ export default class Chord {
     this.#note.transpose(count);
     this.#bass.transpose(count);
 
-    // TODO
+    // builder
+    this.#value =
+      this.#prefix
+      + this.#note
+      + this.#body
+      + (this.#bass ? "/" + this.#bass : "")
+      + this.#postfix;
   }
 
   up() {
     this.#note.up();
     this.#bass.up();
     
-    // TODO
+    // builder
+    this.#value =
+      this.#prefix
+      + this.#note
+      + this.#body
+      + (this.#bass ? "/" + this.#bass : "")
+      + this.#postfix;
   }
 
   down() {
     this.#note.down();
     this.#bass.down();
     
-    // TODO
+    // builder
+    this.#value =
+      this.#prefix
+      + this.#note
+      + this.#body
+      + (this.#bass ? "/" + this.#bass : "")
+      + this.#postfix;
   }
 
   respell() {
     this.#note.respell();
     this.#bass.respell();
     
-    // TODO
+    // builder
+    this.#value =
+      this.#prefix
+      + this.#note
+      + this.#body
+      + (this.#bass ? "/" + this.#bass : "")
+      + this.#postfix;
   }
 }

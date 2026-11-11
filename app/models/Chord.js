@@ -5,9 +5,9 @@ export default class Chord {
   
   #prefix = "";
   #note;
-  #postfix = "";
-
+  #body;
   #bass;
+  #postfix = "";
 
   constructor(value) {
     // TODO

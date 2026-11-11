@@ -84,7 +84,7 @@ export default class Chord {
     this.#body = value;
 
     // builder
-    this.#value = this.#prefix + this.#note + "" + this.#postfix;
+    this.#value = this.#prefix + this.#note + this.#body + "" + this.#postfix;
   }
 
   valueOf() {

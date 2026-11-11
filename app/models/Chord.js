@@ -21,7 +21,7 @@ export default class Chord {
     // TODO
   }
 
-  parser(value) {
+  #parser(value) {
     // TODO
   }
 

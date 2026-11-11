@@ -8,7 +8,7 @@ export default class ChordTest {
   // test
   testValue() {
     // init
-    const chord = new Chord("._A##m(sus4)/C_.");
+    const chord = new Chord("._A##m(sus4)/C##_.");
 
     // action
 

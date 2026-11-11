@@ -26,14 +26,19 @@ export default class Chord {
     // TODO
     var chars = value.split("");
 
+    // prefix
+    let index = 0;
     for (const char of chars) {
       if (char == "." || char == "_") {
         this.#prefix += char;
-        chars = chars.slice(1)
+        index++;
       } else
         break;
     }
 
+    chars = chars.slice(index);
+
+    // postfix
     let index = 0;
     for (const char of chars) {
       if (char == "." || char == "_") {

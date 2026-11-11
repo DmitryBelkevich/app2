@@ -88,7 +88,7 @@ export default class Chord {
       this.#prefix
       + this.#note
       + this.#body
-      + this.#bass ? "/" + this.#bass : ""
+      + !!this.#bass ? ("/" + this.#bass) : ""
       + this.#postfix;
   }
 

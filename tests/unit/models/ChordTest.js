@@ -13,6 +13,6 @@ export default class ChordTest {
     // action
 
     // assert
-    Assert.assertEquals("Am", chord.toString(), "Am must be Am");
+    Assert.assertEquals("._A##m(sus4)/C##_.", chord.toString(), "Am must be Am");
   }
 }

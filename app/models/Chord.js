@@ -49,18 +49,20 @@ export default class Chord {
 
     chars = chars.slice(0, index);
 
-    // TODO
     value = chars.join("");
 
+    // bass
     if (value.includes("/")) {
       const bass = value.split("/")[1];
       this.#bass = new Note(bass);
     }
 
     value = value.split("/")[0];
+
+    // TODO
+    chars = value.split("");
     
-    console.log(this);
-    console.log(value);
+    console.log(chars);
   }
 
   valueOf() {

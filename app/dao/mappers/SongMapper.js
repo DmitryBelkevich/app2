@@ -1,4 +1,4 @@
-import Config from '../config/Config.js';
+import Config from '../../config/Config.js';
 
 import Song from '../../models/Song.js';
 import Genre from '../../models/Genre.js';

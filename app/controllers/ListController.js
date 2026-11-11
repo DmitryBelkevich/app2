@@ -2,7 +2,8 @@ import Controller from './Controller.js';
 
 import SongService from '../services/SongService.js';
 import GenreService from '../services/GenreService.js';
-import ListView from '../views/ListView.js';
+
+import ListView from '../views/list/ListView.js';
 
 export default class ListController extends Controller {
   #songService;

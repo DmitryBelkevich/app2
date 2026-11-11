@@ -36,6 +36,7 @@ export default class Chord {
         break;
     }
 
+    console.log(this.#prefix);
     console.log(chars);
   }
 

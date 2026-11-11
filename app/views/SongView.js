@@ -3,7 +3,7 @@ export default class SongView {
     console.log(this);
 
     for (let i = 0; i < 1000; i++) {
-      console.log(i);
+      document.body.textContent += i;
     }
   }
 }

@@ -50,9 +50,11 @@ export default class Chord {
 
     chars = chars.slice(0, index);
 
-    console.log(this.#prefix);
-    console.log(this.#postfix);
+    //
+    value = chars.join("");
+    
     console.log(chars);
+    console.log(value);
   }
 
   valueOf() {

@@ -23,7 +23,6 @@ export default class Chord {
   }
 
   #parser(value) {
-    // TODO
     var chars = value.split("");
 
     // prefix
@@ -50,7 +49,7 @@ export default class Chord {
 
     chars = chars.slice(0, index);
 
-    //
+    // TODO
     value = chars.join("");
     
     console.log(chars);

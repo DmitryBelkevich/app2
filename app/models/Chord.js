@@ -26,7 +26,15 @@ export default class Chord {
   }
 
   set value(value) {
-    // TODO
+    this.#parser(value);
+    
+    // builder
+    this.#value =
+      this.#prefix
+      + this.#note
+      + this.#body
+      + (this.#bass ? "/" + this.#bass : "")
+      + this.#postfix;
   }
 
   #parser(value) {
@@ -100,18 +108,33 @@ export default class Chord {
   }
 
   transpose(count) {
+    if (!count)
+      return;
+
+    this.#note.transpose(count);
+    this.#bass.transpose(count);
+
     // TODO
   }
 
   up() {
+    this.#note.up();
+    this.#bass.up();
+    
     // TODO
   }
 
   down() {
+    this.#note.down();
+    this.#bass.down();
+    
     // TODO
   }
 
   respell() {
+    this.#note.respell();
+    this.#bass.respell();
+    
     // TODO
   }
 }

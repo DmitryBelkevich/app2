@@ -9,7 +9,9 @@ export default class GenresApiAdapter {
     this.#jsonLoader = new JsonLoader();
   }
   
-  async load(path = path.replace("genres", "songs")) {
+  async load(path) {
+    path = path.replace("genres", "songs");
+    
     const songs = await this.#jsonLoader.load(path);
 
     for (const song of songs)

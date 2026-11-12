@@ -21,6 +21,5 @@ export default class SongController extends Controller {
     console.log(this.#song);
 
     this.#songView = new SongView();
-    this.#songView.setPageTitle(this.#song.band + " " + this.#song.title);
   }
 }

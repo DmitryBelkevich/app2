@@ -32,7 +32,9 @@ export default class ListController extends Controller {
     this.#view = new ListView();
 
     // binds
-    this.#view.binds.forEach(bind => bind(this.#openSong));
+    this.#view.binds.forEach((bind) => {
+      bind(this.#openSong);
+    });
 
     // add components
     this.#genres.forEach(genre => {

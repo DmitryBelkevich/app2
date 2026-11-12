@@ -49,8 +49,8 @@ export default class ListController extends Controller {
     }
 
     // binds
-    this.#view.listeners.forEach((bind) => {
-      bind(this.#openSong);
+    this.#view.listeners.forEach((listener) => {
+      listener(this.#openSong);
     });
   }
 

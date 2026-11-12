@@ -1,15 +1,8 @@
-export default class Genre {
-  #id;
+import Model from "./Model.js";
+
+export default class Genre extends Model {
   #title;
   #songs = [];
-
-  get id() {
-    return #id;
-  }
-
-  set id(id) {
-    this.#id = id;
-  }
 
   get title() {
     return this.#title;

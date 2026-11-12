@@ -100,5 +100,6 @@ export default class Song extends Model {
       return;
     
     // TODO
+    console.log("song transpose: " + count);
   }
 }

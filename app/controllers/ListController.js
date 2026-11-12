@@ -14,7 +14,7 @@ export default class ListController extends Controller {
   #songs;
   #genres;
   
-  #listView;
+  #view;
 
   constructor() {
     super();
@@ -29,10 +29,13 @@ export default class ListController extends Controller {
     console.log(this.#songs);
     console.log(this.#genres);
 
-    this.#listView = new ListView();
+    this.#view = new ListView();
+
+    // binds
+    this.#view.binds.forEach(bind => bind(this.#openSong));
   }
 
-  openSong = (id) => {
+  #openSong = (id) => {
     window.location.href = window.location.origin + Config.APP_NAME + "/song?id=" + id;
   }
 }

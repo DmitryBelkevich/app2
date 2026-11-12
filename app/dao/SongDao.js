@@ -1,22 +1,19 @@
 import Config from '../config/Config.js';
 
-import JsonLoader from '../loaders/JsonLoader.js';
-
+import SongsApiAdapter from './adapters/SongsApiAdapter.js';
 import SongApiAdapter from './adapters/SongApiAdapter.js';
 
 import SongMapper from './mappers/SongMapper.js';
 
 export default class SongDao {
-  #jsonLoader;
   #mapper;
 
   constructor() {
-    this.#jsonLoader = new JsonLoader();
     this.#mapper = new SongMapper();
   }
 
   async getAll() {
-    const arr = await this.#jsonLoader.load(Config.API + "songs");
+    const arr = await new SongsApiAdapter().load(Config.API + "songs");
     
     const songs = this.#mapper.read(arr);
     

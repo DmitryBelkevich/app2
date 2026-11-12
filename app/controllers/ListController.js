@@ -55,6 +55,6 @@ export default class ListController extends Controller {
   }
 
   #openSong = (id) => {
-    window.location.href = window.location.origin + Config.APP_NAME + "/song?id=" + id;
+    window.location.href = window.location.origin + "/" + Config.APP_NAME + "/song?id=" + id;
   }
 }

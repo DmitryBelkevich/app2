@@ -1,3 +1,5 @@
+import Config from '../config/Config.js';
+
 import Controller from './Controller.js';
 
 import SongService from '../services/SongService.js';
@@ -28,5 +30,9 @@ export default class ListController extends Controller {
     console.log(this.#genres);
 
     this.#listView = new ListView();
+  }
+
+  openSong = (id) => {
+    window.location.href = window.location.origin + Config.APP_NAME + "/song?id=" + id;
   }
 }

@@ -112,7 +112,9 @@ export default class Chord {
       return;
 
     this.#note.transpose(count);
-    this.#bass.transpose(count);
+
+    if (this.#bass)
+      this.#bass.transpose(count);
 
     // builder
     this.#value =
@@ -125,7 +127,9 @@ export default class Chord {
 
   up() {
     this.#note.up();
-    this.#bass.up();
+
+    if (this.#bass)
+      this.#bass.up();
     
     // builder
     this.#value =
@@ -138,7 +142,9 @@ export default class Chord {
 
   down() {
     this.#note.down();
-    this.#bass.down();
+
+    if (this.#bass)
+      this.#bass.down();
     
     // builder
     this.#value =
@@ -151,7 +157,9 @@ export default class Chord {
 
   respell() {
     this.#note.respell();
-    this.#bass.respell();
+
+    if (this.#bass)
+      this.#bass.respell();
     
     // builder
     this.#value =

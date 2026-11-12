@@ -1,6 +1,15 @@
-body {
+/* body {
   border: 1px solid black;
   
   max-width: 450px;
   margin: 0px auto;
+} */
+
+body {
+  border: 1px solid black;
+  
+  display: grid;
+  place-items: center; /* Центрирует и по горизонтали, и по вертикали */
+  min-height: 100vh;
+  margin: 4px;
 }

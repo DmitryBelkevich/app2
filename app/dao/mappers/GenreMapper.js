@@ -1,5 +1,6 @@
 import Song from '../../models/Song.js';
 import Genre from '../../models/Genre.js';
+import Chord from '../../models/Chord.js';
 
 export default class GenreMapper {
   read(data) {

@@ -17,7 +17,7 @@ export default class SongMapper {
     song.id = obj.id;
     song.band = obj.band;
     song.title = obj.title;
-    song.tags = obj.tags;
+    song.tags.push(obj.tags || []);
     
     const genre = new Genre();
       genre.id = 1;
@@ -45,7 +45,7 @@ export default class SongMapper {
       song.id = obj.id;
       song.band = obj.band;
       song.title = obj.title;
-      song.tags = obj.tags;
+      song.tags.push(obj.tags || []);
 
       if (!genres.has(obj.genre)) {
         const genre = new Genre();

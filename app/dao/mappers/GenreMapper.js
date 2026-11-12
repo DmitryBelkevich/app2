@@ -32,6 +32,7 @@ export default class GenreMapper {
         song.id = s.id;
         song.band = s.band;
         song.title = s.title;
+        song.tags = s.tags;
         song.genre = genre;
         song.raiting = s.raiting;
         song.text = Config.STORAGE + s.text;

@@ -1,6 +1,6 @@
 const Config = Object.freeze({
   APP_NAME: "app2",
-  API: "https://dmitrybelkevich.github.io/app/api/",
+  API: "https://dmitrybelkevich.github.io/app2/api/",
   STORAGE: "https://dmitrybelkevich.github.io/storage/Text & Chords/",
 });
 

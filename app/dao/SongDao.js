@@ -16,7 +16,7 @@ export default class SongDao {
   }
 
   async getAll() {
-    const arr = await this.#jsonLoader.load(window.location.origin + "/" + Config.APP_NAME + "/api/songs");
+    const arr = await this.#jsonLoader.load(Config.API + "songs");
     
     const songs = this.#mapper.read(arr);
     
@@ -24,7 +24,7 @@ export default class SongDao {
   }
 
   async getById(id) {
-    const obj = await new SongApiAdapter().load(window.location.origin + "/" + Config.APP_NAME + "/api/songs?id=" + id);
+    const obj = await new SongApiAdapter().load(Config.API + "songs?id=" + id);
     
     const song = this.#mapper.read(obj);
     

@@ -31,7 +31,7 @@ export default class SongMapper {
     song.score = obj.score;
     song.playback = obj.playback;
     
-    return song;
+    return null;//song;
   }
 
   #createSongs(arr) {

@@ -1,3 +1,5 @@
+import Config from '../config/Config.js';
+
 import JsonLoader from '../../loaders/JsonLoader.js';
 
 export default class SongsApiAdapter {
@@ -7,8 +9,11 @@ export default class SongsApiAdapter {
     this.#jsonLoader = new JsonLoader();
   }
 
-  async load(path) {//"https://dmitrybelkevich.github.io/app3/api/songs"
+  async load(path) {
     const songs = await this.#jsonLoader.load(path);
+
+    for (const song of songs)
+      song.text = Config.STORAGE + song.text;
     
     return songs;
   }

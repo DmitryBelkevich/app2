@@ -84,7 +84,9 @@ export default class Song extends Model {
 
   set key(key) {
     this.#key = key;
-    this.#key.transpose(this.#transposition);
+
+    if (this.#transposition)
+      this.#key.transpose(this.#transposition);
   }
 
   get transposition() {

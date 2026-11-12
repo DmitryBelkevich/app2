@@ -3,6 +3,7 @@ import Model from "./Model.js";
 export default class Song extends Model {
   #band;
   #title;
+  #tags = [];
   #genre;
   #raiting;
 
@@ -16,6 +17,14 @@ export default class Song extends Model {
 
   set band(band) {
     this.#band = band;
+  }
+
+  get tags() {
+    return this.#tags;
+  }
+
+  set tags(tags) {
+    this.#tags = tags;
   }
 
   get title() {

@@ -1,9 +1,12 @@
+import View from '../View.js';
+
 import Autoscroll from './components/Autoscroll.js';
 
-export default class SongView {
+export default class SongView extends View {
   #autoscroll;
   
   constructor() {
+    super();
     this.#autoscroll = new Autoscroll();
     
     console.log(this);

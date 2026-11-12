@@ -46,7 +46,8 @@ export default class ListController extends Controller {
     });
   }
 
-  #openSong = (id) => {console.log("openSong");
-    window.location.href = window.location.origin + Config.APP_NAME + "/song?id=" + id;
+  #openSong = (id) => {
+    console.log("openSong");
+    // window.location.href = window.location.origin + Config.APP_NAME + "/song?id=" + id;
   }
 }

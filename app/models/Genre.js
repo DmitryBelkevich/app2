@@ -1,7 +1,9 @@
-import Model from './Model.js';
+// import Model from './Model.js';
 
 export default class Genre {
   #id;
+  #title;
+  #songs = [];
 
   get id() {
     return #id;
@@ -10,9 +12,6 @@ export default class Genre {
   set id(id) {
     this.#id = id;
   }
-  
-  #title;
-  #songs = [];
 
   get title() {
     return this.#title;

@@ -52,7 +52,7 @@ export default class ListView extends View {
     this.#body.append(container);
 
     // listener
-    console.log(song.id);
+    // console.log(song.id);
     const id = 0;//song.id;
     this.#binds.push((handler) => {
       container.addEventListener('click', () => {

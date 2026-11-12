@@ -7,5 +7,6 @@ export default class View {
     this.#cssLoader = new CssLoader();
 
     this.#cssLoader.load("./css/reset.css");
+    this.#cssLoader.load("./css/settings.css");
   }
 }

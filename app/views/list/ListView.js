@@ -51,9 +51,7 @@ export default class ListView extends View {
     container.append(title, band, raiting);
     this.#body.append(container);
 
-    // listener
-    // console.log(song.id);
-    // const id = 0;//song.id;
+    // listeners
     this.#binds.push((handler) => {
       container.addEventListener('click', () => {
         handler(song.id);

@@ -36,6 +36,8 @@ export default class GenreMapper {
         song.text = s.text;
         song.score = s.score;
         song.playback = s.playback;
+        song.key = new Chord(s.key);
+        song.transposition = s.transposition;
 
         // mapping
         genre.songs.push(song);

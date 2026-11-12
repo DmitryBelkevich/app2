@@ -91,14 +91,14 @@ export default class Song extends Model {
   }
 
   set transposition(transposition) {
+    this.#transposition = transposition;
+
     this.transpose(transposition - this.#transposition);
   }
 
   transpose(count) {
     if (!count)
       return;
-
-    this.#transposition = transposition;
     
     // TODO
   }

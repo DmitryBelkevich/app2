@@ -1,5 +1,6 @@
 import Song from '../../models/Song.js';
 import Genre from '../../models/Genre.js';
+import Chord from '../../models/Chord.js';
 
 export default class SongMapper {
   read(data) {
@@ -28,6 +29,8 @@ export default class SongMapper {
     song.text = obj.text;
     song.score = obj.score;
     song.playback = obj.playback;
+    song.key = new Chord(obj.key);
+    song.transposition = obj.transposition;
     
     return song;
   }

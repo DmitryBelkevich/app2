@@ -1,3 +1,5 @@
+import Config from '../../config/Config.js';
+
 import JsonLoader from '../../loaders/JsonLoader.js';
 
 export default class SongApiAdapter {

@@ -1,5 +1,3 @@
-// import Model from './Model.js';
-
 export default class Genre {
   #id;
   #title;

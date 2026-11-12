@@ -98,10 +98,10 @@ export default class Song extends Model {
     if (!count)
       return;
 
-    this.#transposition += count;
-
     if (this.#key)
       this.#key.transpose(count);
+
+    this.#transposition += count;
     
     // TODO
   }

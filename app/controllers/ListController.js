@@ -34,7 +34,7 @@ export default class ListController extends Controller {
     // binds
     this.#view.binds.forEach(bind => bind(this.#openSong));
 
-    //
+    // add components
     this.#genres.forEach(genre => {
       this.#view.addGenre(genre);
 

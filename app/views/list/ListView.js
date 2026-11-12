@@ -44,7 +44,7 @@ export default class ListView extends View {
 
     const tags = document.createElement("div");
     tags.classList.add("tags");
-    // for (const tag of song.tags) {}
+    tags.textContent = song.tags;
 
     const raiting = document.createElement("div");
     raiting.classList.add("raiting");

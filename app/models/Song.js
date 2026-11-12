@@ -98,6 +98,8 @@ export default class Song extends Model {
     if (!count)
       return;
 
+    this.#transposition = transposition;
+    
     // TODO
   }
 }

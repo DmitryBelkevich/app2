@@ -33,6 +33,15 @@ export default class ListController extends Controller {
 
     // binds
     this.#view.binds.forEach(bind => bind(this.#openSong));
+
+    //
+    this.#genres.forEach(genre => {
+      this.#view.addGenre(genre);
+
+      genre.songs.forEach(song => {
+        this.#view.addSong(song);
+      });
+    });
   }
 
   #openSong = (id) => {

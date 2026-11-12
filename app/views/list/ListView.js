@@ -1,5 +1,7 @@
-export default class ListView {
+import View from '../View.js';
+
+export default class ListView extends View {
   constructor() {
-    console.log(this);
+    super();
   }
 }

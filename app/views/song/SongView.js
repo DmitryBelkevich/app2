@@ -13,5 +13,7 @@ export default class SongView {
       div.textContent = i;
       document.body.append(div);
     }
+
+    this.#autoscroll.run();
   }
 }

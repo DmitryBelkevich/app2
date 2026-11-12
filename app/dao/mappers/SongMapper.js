@@ -30,9 +30,9 @@ export default class SongMapper {
     song.score = obj.score;
     song.playback = obj.playback;
     song.key = new Chord(obj.key);
-    song.transposition = obj.transposition;
+    song.transposition = obj.transposition;console.log(song);
     
-    return song;
+    return null;//song;
   }
 
   #createSongs(arr) {

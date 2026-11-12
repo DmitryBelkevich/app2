@@ -1,4 +1,4 @@
-import Config from '../../config/Config.js';
+// import Config from '../../config/Config.js';
 
 import Song from '../../models/Song.js';
 import Genre from '../../models/Genre.js';
@@ -35,7 +35,7 @@ export default class GenreMapper {
         song.tags.push(...s.tags || []);
         song.genre = genre;
         song.raiting = s.raiting;
-        song.text = Config.STORAGE + s.text;
+        song.text = s.text;//Config.STORAGE + s.text;
         song.score = s.score;
         song.playback = s.playback;
 

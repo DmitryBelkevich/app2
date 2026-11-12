@@ -11,6 +11,9 @@ export default class Song extends Model {
   #score;
   #playback;
 
+  #key;
+  #transposition = 0;
+
   get band() {
     return this.#band;
   }
@@ -73,5 +76,28 @@ export default class Song extends Model {
 
   set playback(playback) {
     this.#playback = playback;
+  }
+
+  get key() {
+    return this.#key;
+  }
+
+  set key(key) {
+    this.#key = key;
+  }
+
+  get transposition() {
+    return this.#transposition;
+  }
+
+  set transposition(transposition) {
+    this.transpose(transposition - this.#transposition);
+  }
+
+  transpose(count) {
+    if (!count)
+      return;
+
+    // TODO
   }
 }

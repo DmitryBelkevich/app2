@@ -33,11 +33,12 @@
 
 .song {
   .tags {
-    font-size: 50%;
+    font-size: 80%;
   }
-  
-  .tags {
-    margin: 0px;
-    padding: 0px;
+}
+
+.song {
+  .raiting {
+    
   }
 }

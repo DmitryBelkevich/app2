@@ -1,3 +1,5 @@
+import Config from '../../config/Config.js';
+
 import JsonLoader from '../../loaders/JsonLoader.js';
 
 export default class GenresApiAdapter {
@@ -11,6 +13,9 @@ export default class GenresApiAdapter {
     path = path.replace("api/genres", "api/songs");
 
     const songs = await this.#jsonLoader.load(path);
+
+    for (const song of songs)
+      song.text = Config.STORAGE + song.text;
     
     const genres = this.#createGenres(songs);
     

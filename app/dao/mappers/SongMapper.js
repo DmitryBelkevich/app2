@@ -29,7 +29,7 @@ export default class SongMapper {
     song.text = obj.text;
     song.score = obj.score;
     song.playback = obj.playback;
-    song.key = new Chord(obj.key);
+    song.key = new Chord(obj.key || "");
     song.transposition = obj.transposition;
     
     return song;
@@ -64,7 +64,7 @@ export default class SongMapper {
       song.text = obj.text;
       song.score = obj.score;
       song.playback = obj.playback;
-      song.key = new Chord(obj.key);
+      song.key = new Chord(obj.key || "");
       song.transposition = obj.transposition;
       
       songs.push(song);

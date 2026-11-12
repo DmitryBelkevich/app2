@@ -44,6 +44,7 @@ export default class ListController extends Controller {
       this.#view.addGenre(genre);
 
       for (const song of genre.songs) {
+        console.log(song.id);
         this.#view.addSong(song);
       }
     }

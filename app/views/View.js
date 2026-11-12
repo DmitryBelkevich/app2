@@ -9,4 +9,8 @@ export default class View {
     this._cssLoader.load("./app/views/css/reset.css");
     this._cssLoader.load("./app/views/css/settings.css");
   }
+
+  setPageTitle(title) {
+    document.title = title;
+  }
 }

@@ -1,4 +1,4 @@
-import Config from '../../config/Config.js';
+// import Config from '../../config/Config.js';
 
 import Song from '../../models/Song.js';
 import Genre from '../../models/Genre.js';
@@ -27,7 +27,7 @@ export default class SongMapper {
     song.genre.songs.push(song);
 
     song.raiting = obj.raiting;
-    song.text = Config.STORAGE + obj.text;
+    song.text = obj.text;//song.text = Config.STORAGE + obj.text;
     song.score = obj.score;
     song.playback = obj.playback;
     
@@ -60,7 +60,7 @@ export default class SongMapper {
       song.genre.songs.push(song);
       
       song.raiting = obj.raiting;
-      song.text = Config.STORAGE + obj.text;
+      song.text = obj.text;// song.text = Config.STORAGE + obj.text;
       song.score = obj.score;
       song.playback = obj.playback;
       

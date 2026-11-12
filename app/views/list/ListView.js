@@ -42,11 +42,10 @@ export default class ListView extends View {
     band.classList.add("band");
     band.textContent = song.band;
 
-    if (!song.tags.length) {
-      const tags = document.createElement("div");
-      tags.classList.add("tags");
+    const tags = document.createElement("div");
+    tags.classList.add("tags");
+    if (!song.tags.length)
       tags.textContent = "[" + song.tags.join("] [") + "]";
-    }
 
     const raiting = document.createElement("div");
     raiting.classList.add("raiting");

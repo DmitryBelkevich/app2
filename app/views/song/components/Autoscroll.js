@@ -2,6 +2,10 @@ export default class Autoscroll {
   #speed = 10;//1 slow, 10 normal, 100 fast.
   #animationFrameId;
 
+  constructor() {
+    
+  }
+
   set speed(speed) {
     this.#speed = speed;
   }

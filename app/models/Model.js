@@ -2,7 +2,7 @@ export default class Model {
   _id;
 
   get id() {
-    return _id;
+    return this._id;
   }
 
   set id(id) {

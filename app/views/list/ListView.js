@@ -53,7 +53,9 @@ export default class ListView extends View {
 
     // listener
     this.#binds.push((handler) => {
-      container.addEventListener('click', () => handler(song.id));
+      container.addEventListener('click', () => {
+        handler(song.id);
+      });
     });
   }
 }

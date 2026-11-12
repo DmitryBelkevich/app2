@@ -12,6 +12,10 @@ export default class ListView extends View {
     this.#body = document.body;
   }
 
+  get binds() {
+    return this.#binds;
+  }
+
   addGenre(genre) {
     // container
     const container = document.createElement("div");
@@ -48,7 +52,7 @@ export default class ListView extends View {
     this.#body.append(container);
 
     // listener
-    this.binds.push((handler) => {
+    this.#binds.push((handler) => {
       container.addEventListener('click', () => handler(song.id));
     });
   }

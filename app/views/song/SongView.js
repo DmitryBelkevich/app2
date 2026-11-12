@@ -1,6 +1,6 @@
 import View from '../View.js';
 
-import Autoscroll from './components/Autoscroll.js';
+import Autoscroll from './services/Autoscroll.js';
 
 export default class SongView extends View {
   #autoscroll;

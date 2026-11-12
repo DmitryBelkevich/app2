@@ -2,7 +2,7 @@ import View from '../View.js';
 
 export default class ListView extends View {
   #body;
-  #binds = [];
+  #listeners = [];
   
   constructor() {
     super();
@@ -12,8 +12,8 @@ export default class ListView extends View {
     this.#body = document.body;
   }
 
-  get binds() {
-    return this.#binds;
+  get listeners() {
+    return this.#listeners;
   }
 
   addGenre(genre) {
@@ -52,7 +52,7 @@ export default class ListView extends View {
     this.#body.append(container);
 
     // listeners
-    this.#binds.push((handler) => {
+    this.#listeners.push((handler) => {
       container.addEventListener('click', () => {
         handler(song.id);
       });

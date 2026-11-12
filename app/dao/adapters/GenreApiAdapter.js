@@ -8,7 +8,7 @@ export default class GenreApiAdapter {
   }
   
   async load(path) {// "https://dmitrybelkevich.github.io/app2/api/genres?id=1"
-    // const result = path.replace("api/genres", "api/songs");
+    // path = path.replace("api/genres", "api/songs");
     return null;
   }
 }

@@ -1,12 +1,12 @@
 import CssLoader from './loaders/CssLoader.js';
 
 export default class View {
-  #cssLoader;
+  _cssLoader;
   
   constructor() {
-    this.#cssLoader = new CssLoader();
+    this._cssLoader = new CssLoader();
 
-    this.#cssLoader.load("./app/views/css/reset.css");
-    this.#cssLoader.load("./app/views/css/settings.css");
+    this._cssLoader.load("./app/views/css/reset.css");
+    this._cssLoader.load("./app/views/css/settings.css");
   }
 }

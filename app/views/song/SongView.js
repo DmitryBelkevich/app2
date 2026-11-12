@@ -3,6 +3,7 @@ import View from '../View.js';
 import Autoscroll from './services/Autoscroll.js';
 
 import Navigator from './components/Navigator.js';
+import Text from './components/Text.js';
 
 export default class SongView extends View {
   #autoscroll;

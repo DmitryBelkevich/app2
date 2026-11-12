@@ -46,7 +46,7 @@ export default class ListView extends View {
     tags.classList.add("tags");
     tags.textContent = "[" + song.tags.join(", ") + "]";
 
-    if (!song.raiting.length) {
+    if (!song.tags.length) {
       const raiting = document.createElement("div");
       raiting.classList.add("raiting");
       for (let i = 0; i < song.raiting; i++)

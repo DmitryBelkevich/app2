@@ -1,6 +1,5 @@
-import Model from './Model.js';
-
-export default class Song extends Model {
+export default class Song {
+  #id;
   #band;
   #title;
   #genre;
@@ -9,6 +8,14 @@ export default class Song extends Model {
   #text;
   #score;
   #playback;
+
+  get id() {
+    return #id;
+  }
+
+  set id(id) {
+    this.#id = id;
+  }
 
   get band() {
     return this.#band;

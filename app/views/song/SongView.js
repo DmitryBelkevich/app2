@@ -19,8 +19,4 @@ export default class SongView extends View {
 
     // this.#autoscroll.run();
   }
-
-  setPageTitle(title) {
-    document.title = title;
-  }
 }

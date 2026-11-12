@@ -99,7 +99,7 @@ export default class Song extends Model {
     if (!count)
       return;
     
+    this.#key.transpose(count);
     // TODO
-    console.log("song transpose: " + count);
   }
 }

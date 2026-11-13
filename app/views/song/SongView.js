@@ -6,4 +6,8 @@ export default class SongView {
   init() {
     
   }
+
+  setPageTitle(title) {
+    document.title = title;
+  }
 }

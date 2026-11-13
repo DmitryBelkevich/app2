@@ -1,15 +1,16 @@
 export default class NavigatorComponent {
+  #container;
   #list_button;
   #autoscroll_button;
   
   constructor() {
     // container
-    const container = document.createElement("nav");
+    this.#container = document.createElement("nav");
 
     // components
-    this.#list_button = new Button(container, "◀️");
+    this.#list_button = new Button(this.#container, "◀️");
 
-    this.#autoscroll_button = new Button(container, "⏬");
+    this.#autoscroll_button = new Button(this.#container, "⏬");
     this.#autoscroll_button.id = "autoscroll";
   }
 

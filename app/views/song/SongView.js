@@ -1,5 +1,8 @@
 import View from '../View.js';
 
+import NavigatorComponent from '../views/song/components/NavigatorComponent.js';
+import TextComponent from '../views/song/components/TextComponent.js';
+
 import Autoscroll from './services/Autoscroll.js';
 
 export default class SongView extends View {
@@ -17,8 +20,8 @@ export default class SongView extends View {
 
     this.setPageTitle(song.band + " - " + song.title);
 
-    // this.#view.addComponent(new NavigatorComponent());
-    // this.#view.addComponent(new TextComponent(this.#song));
+    this..addComponent(new NavigatorComponent());
+    this..addComponent(new TextComponent(song));
   }
 
   init() {

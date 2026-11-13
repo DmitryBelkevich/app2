@@ -1,6 +1,8 @@
 export default class TextComponent {
-  constructor() {
-    
+  #song;
+  
+  constructor(song) {
+    this.#song = song;
   }
 
   init() {

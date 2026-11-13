@@ -20,8 +20,6 @@ export default class NavigatorComponent {
     this.#autoscroll_button = new Button("⏬");
     this.#autoscroll_button.id = "autoscroll";
     this.#autoscroll_button.init();
-    
-    this.#autoscroll_button = document.createElement("button");
 
     // fill
     container.append(this.#list_button.button, this.#autoscroll_button.button);

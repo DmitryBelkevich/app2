@@ -22,6 +22,10 @@ export default class ListView {
       component.init();
   }
 
+  get components() {
+    return this.#components;
+  }
+
   addComponent(component) {
     this.#components.push(component);
   }

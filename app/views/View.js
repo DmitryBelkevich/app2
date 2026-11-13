@@ -6,7 +6,7 @@ export default class View {
   constructor() {
     this._cssLoader = new CssLoader();
 
-    this.#cssLoader.load("./app/views/css/reset.css");
-    this.#cssLoader.load("./app/views/css/settings.css");
+    this._cssLoader.load("./app/views/css/reset.css");
+    this._cssLoader.load("./app/views/css/settings.css");
   }
 }

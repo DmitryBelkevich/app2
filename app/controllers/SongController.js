@@ -27,5 +27,7 @@ export default class SongController extends Controller {
     this.#view.addComponent(new TextComponent(this.#song));
     
     this.#view.init();
+
+    // binds
   }
 }

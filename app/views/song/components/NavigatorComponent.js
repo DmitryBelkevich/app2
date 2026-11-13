@@ -17,4 +17,8 @@ export default class NavigatorComponent {
     
     document.body.append(this.#container);
   }
+
+  get components() {
+    return this.#components;
+  }
 }

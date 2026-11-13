@@ -15,7 +15,7 @@ export default class NavigatorComponent {
   init() {
     // components
     for (const component of this.#components.values())
-      this.#container.append(component);
+      this.#container.append(component.element);
 
     // fill
     document.body.append(this.#container);

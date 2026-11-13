@@ -25,7 +25,7 @@ export default class SongView extends View {
   }
 
   init() {
-    for (const component of this.#components)
+    for (const component of this.#components.values())
       component.init();
   }
 

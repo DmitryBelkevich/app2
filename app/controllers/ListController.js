@@ -43,4 +43,8 @@ export default class ListController extends Controller {
     
     this.#view.init();
   }
+
+  #openSong = (id) => {
+    window.location.href = window.location.origin + "/" + Config.APP_NAME + "/song?id=" + id;
+  }
 }

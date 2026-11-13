@@ -19,6 +19,7 @@ export default class SongComponent {
     title.textContent = this.#song.title;
 
     // fill
+    container.append(title);
     this.#body.append(container);
   }
 }

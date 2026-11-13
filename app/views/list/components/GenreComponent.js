@@ -1,11 +1,16 @@
 export default class GenreComponent {
   #genre;
   #body;
+  #listeners = [];
   
   constructor(genre) {
     this.#genre = genre;
 
     this.#body = document.body;
+  }
+
+  get listeners() {
+    return this.#listeners;
   }
 
   init() {

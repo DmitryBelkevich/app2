@@ -1,4 +1,4 @@
-import CssLoader from './loaders/CssLoader.js';
+import CssLoader from '../loaders/CssLoader.js';
 
 import GenreComponent from './components/GenreComponent.js';
 import SongComponent from './components/SongComponent.js';

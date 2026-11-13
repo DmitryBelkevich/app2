@@ -1,7 +1,7 @@
 import View from '../View.js';
 
-import NavigatorComponent from '../views/song/components/NavigatorComponent.js';
-import TextComponent from '../views/song/components/TextComponent.js';
+import NavigatorComponent from './components/NavigatorComponent.js';
+import TextComponent from './components/TextComponent.js';
 
 import Autoscroll from './services/Autoscroll.js';
 

@@ -1,0 +1,32 @@
+/* container */
+
+#title {
+  border: 1px solid black;
+  
+  margin: 0px;
+  padding: 5px;
+}
+
+/* components */
+
+#title {
+  .title {
+    font-size: 130%;
+  }
+  
+  .title {
+    margin: 0px;
+    padding: 0px;
+  }
+}
+
+#title {
+  .band {
+    color: grey;
+  }
+
+  .band {
+    margin-left: 10px;
+    padding: 0px;
+  }
+}

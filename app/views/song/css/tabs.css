@@ -1,0 +1,24 @@
+/* container */
+
+#tabs {
+  margin: 0px;
+  padding: 3px;
+  
+  border: 1px solid black;
+}
+
+/* components */
+
+#tabs {
+  .tab {
+    font-size: 15px;
+  }
+
+  .tab {
+    margin: 0px;
+    padding: 10px 0px;
+    
+    width: 33.3%;
+    box-sizing: border-box;
+  }
+}

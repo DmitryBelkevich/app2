@@ -1,29 +1,28 @@
 export default class NavigatorComponent {
-  #body;
-
+  #container;
+  
   #list_button;
   #autoscroll_button;
   
   constructor() {
-    this.#body = document.body;
+    // container
+    this.#container = document.createElement("nav");
+
+    // components
+    this.#list_button = new Button("◀️");
+
+    this.#autoscroll_button = new Button("⏬");
+    this.#autoscroll_button.id = "autoscroll";
   }
 
   init() {
-    // container
-    const container = document.createElement("nav");
-
-    // 1. list
-    this.#list_button = new Button("◀️");
+    // components
     this.#list_button.init();
-
-    // 2. auto-scroll
-    this.#autoscroll_button = new Button("⏬");
-    this.#autoscroll_button.id = "autoscroll";
     this.#autoscroll_button.init();
 
     // fill
-    container.append(this.#list_button.button, this.#autoscroll_button.button);
-    this.#body.append(container);
+    this.#container.append(this.#list_button.button, this.#autoscroll_button.button);
+    document.body.append(container);
   }
 
   // 2. auto-scroll
@@ -37,10 +36,10 @@ export default class NavigatorComponent {
 
 class Button {
   #button;
+  #content;
 
   constructor(content) {
-    this.#button = document.createElement("button");
-    this.#button.textContent = content;
+    this.#content = content;
   }
 
   get button() {
@@ -52,7 +51,8 @@ class Button {
   }
   
   init() {
-    
+    this.#button = document.createElement("button");
+    this.#button.textContent = this.#content;
   }
 
   bind(handler) {

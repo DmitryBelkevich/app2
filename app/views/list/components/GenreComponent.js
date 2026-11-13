@@ -11,7 +11,7 @@ export default class GenreComponent {
     // container
     const container = document.createElement("div");
     container.classList.add("genre");
-    container.textContent = genre.title;
+    container.textContent = this.#genre.title;
 
     // components
 

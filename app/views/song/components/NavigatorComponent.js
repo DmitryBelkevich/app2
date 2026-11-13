@@ -38,7 +38,7 @@ class Button {
   constructor(container, content) {
     this.#container = container;
     this.#element = document.createElement("button");
-    this.#element.textContent = #content;
+    this.#element.textContent = content;
   }
 
   get element() {

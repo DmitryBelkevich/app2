@@ -33,10 +33,10 @@ export default class NavigatorComponent {
 
 class Button {
   #container;
-  
   #element;
 
   constructor(container, content) {
+    this.#container = container;
     this.#element = document.createElement("button");
     this.#element.textContent = #content;
   }

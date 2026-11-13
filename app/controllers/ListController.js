@@ -32,6 +32,7 @@ export default class ListController extends Controller {
     console.log(this.#genres);
 
     this.#view = new ListView();
+    this.#view.setPageTitle("Track-list");
 
     for (const genre of this.#genres) {
       this.#view.addComponent(new GenreComponent(genre));

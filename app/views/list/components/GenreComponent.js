@@ -1,5 +1,5 @@
 export default class GenreComponent {
-  constructor() {
+  constructor(genre) {
     
   }
 

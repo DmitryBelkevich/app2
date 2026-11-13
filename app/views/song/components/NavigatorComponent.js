@@ -3,20 +3,16 @@ export default class NavigatorComponent {
   #components = new Map();
   
   constructor() {
-    // container
     this.#container = document.createElement("nav");
-
-    // components
+    
     this.#components.set("list_button", new Button().content("◀️"));
     this.#components.set("autoscroll_button", new Button().content("⏬").id("autoscroll"));
   }
 
   init() {
-    // components
     for (const component of this.#components.values())
       this.#container.append(component.element);
-
-    // fill
+    
     document.body.append(this.#container);
   }
 }
@@ -28,16 +24,16 @@ class Button {
     this.#element = document.createElement("button");
   }
 
-  set id(id) {
-    this.#element.id = id;
-    return this;
-  }
-
   get element() {
     return this.#element;
   }
 
-  set content(content) {
+  id(id) {
+    this.#element.id = id;
+    return this;
+  }
+
+  content(content) {
     this.#element.textContent = content;
     return this;
   }

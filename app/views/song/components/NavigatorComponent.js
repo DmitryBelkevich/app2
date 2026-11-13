@@ -28,7 +28,7 @@ class Button {
     this.#element = document.createElement("button");
   }
 
-  id(id) {
+  set id(id) {
     this.#element.id = id;
     return this;
   }
@@ -37,7 +37,7 @@ class Button {
     return this.#element;
   }
 
-  content(content) {
+  set content(content) {
     this.#element.textContent = content;
     return this;
   }

@@ -22,8 +22,18 @@ export default class SongComponent {
     band.classList.add("band");
     band.textContent = this.#song.band;
 
+    const tags = document.createElement("div");
+    tags.classList.add("tags");
+    if (song.tags.length)
+      tags.textContent = "tags: " + "[" + song.tags.join("] [") + "]";
+
+    const raiting = document.createElement("div");
+    raiting.classList.add("raiting");
+    for (let i = 0; i < song.raiting; i++)
+      raiting.textContent += "⭐️";
+
     // fill
-    container.append(title);
+    container.append(title, band, tags, raiting);
     this.#body.append(container);
   }
 }

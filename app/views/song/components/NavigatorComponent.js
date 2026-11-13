@@ -13,8 +13,8 @@ export default class NavigatorComponent {
     const container = document.createElement("nav");
 
     // 1. list
-    this.#list_button = document.createElement("button");
-    this.#list_button.textContent = "◀️";
+    this.#list_button = new Button("◀️");
+    this.#list_button.init();
 
     // 2. auto-scroll
     this.#autoscroll_button = document.createElement("button");
@@ -38,6 +38,36 @@ export default class NavigatorComponent {
 
   bindAutoScroll(handler) {
     this.#autoscroll_button.addEventListener("click", () => {
+      handler();
+    });
+  }
+}
+
+class Button {
+  #button;
+
+  #id;
+  #content;
+
+  constructor(content) {
+    this.#content = content;
+  }
+
+  get id() {
+    return this.#id;
+  }
+
+  set id(id) {
+    this.#id = id;
+  }
+  
+  init() {
+    this.#button = document.createElement("button");
+    this.#button.textContent = this.#content;
+  }
+
+  bind(handler) {
+    this.#button.addEventListener("click", () => {
       handler();
     });
   }

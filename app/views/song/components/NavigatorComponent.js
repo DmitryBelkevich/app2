@@ -8,7 +8,6 @@ export default class NavigatorComponent {
 
     // components
     this.#components.set("list_button", new Button().content("◀️"));
-
     this.#components.set("autoscroll_button", new Button().content("⏬").id("autoscroll"));
   }
 

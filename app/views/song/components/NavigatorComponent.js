@@ -42,7 +42,7 @@ class Button {
     
   }
 
-  bind(handler) {
+  click(handler) {
     this.#element.addEventListener("click", () => {
       handler();
     });

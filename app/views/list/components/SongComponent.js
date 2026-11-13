@@ -1,7 +1,7 @@
 export default class SongComponent {
   #song;
   #body;
-  #listener;
+  #listeners = [];
   
   constructor(song) {
     this.#song = song;
@@ -37,11 +37,11 @@ export default class SongComponent {
     container.append(title, band, tags, raiting);
     this.#body.append(container);
 
-    // listener
-    this.#listener = (handler) => {
-      container.addEventListener('click', () => {console.log(this.#song.id);
+    // listeners
+    this.#listeners.push((handler) => {
+      container.addEventListener('click', () => {
         handler(this.#song.id);
       });
-    }
+    });
   }
 }

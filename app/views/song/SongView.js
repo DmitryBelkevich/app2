@@ -3,12 +3,14 @@ import View from '../View.js';
 import Autoscroll from './services/Autoscroll.js';
 
 export default class SongView extends View {
+  #song;
   #components = [];
 
   #autoscroll;
   
-  constructor() {
+  constructor(song) {
     super();
+    this.#song = song;
 
     this._cssLoader.load("./app/views/song/css/nav.css");
 

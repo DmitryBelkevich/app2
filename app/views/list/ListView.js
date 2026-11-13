@@ -43,7 +43,7 @@ export default class ListView {
     
     for (const component of this.#components)
       if (component instanceof SongComponent)
-        listeners.push(component);
+        listeners.push(...component.listeners);
     
     return listeners;
   }

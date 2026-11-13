@@ -1,5 +1,11 @@
-export default class Text {
-  constructor() {
+export default class TextComponent {
+  #song;
+  
+  constructor(song) {
+    this.#song = song;
+  }
+
+  init() {
     for (let i = 0; i < 1000; i++) {
       const div = document.createElement("div");
       div.textContent = i;

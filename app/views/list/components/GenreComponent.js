@@ -1,0 +1,22 @@
+export default class GenreComponent {
+  #genre;
+  #body;
+  
+  constructor(genre) {
+    this.#genre = genre;
+
+    this.#body = document.body;
+  }
+
+  init() {
+    // container
+    const container = document.createElement("div");
+    container.classList.add("genre");
+    container.textContent = this.#genre.title;
+
+    // components
+
+    // fill
+    this.#body.append(container);
+  }
+}

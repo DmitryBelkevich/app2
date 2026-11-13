@@ -1,15 +1,16 @@
 import Controller from './Controller.js';
 
-import MainView from '../views/MainView.js';
+import MainView from '../views/main/MainView.js';
 
 export default class MainController extends Controller {
-  #mainView;
+  #view;
   
   constructor() {
     super();
   }
 
   async init() {
-    this.#mainView = new MainView();
+    this.#view = new MainView();
+    this.#view.init();
   }
 }

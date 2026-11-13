@@ -1,66 +1,40 @@
-import View from '../View.js';
+import CssLoader from '../loaders/CssLoader.js';
 
-export default class ListView extends View {
-  #body;
-  #listeners = [];
+import GenreComponent from './components/GenreComponent.js';
+import SongComponent from './components/SongComponent.js';
+
+export default class ListView {
+  #cssLoader;
+  #components = [];
   
   constructor() {
-    super();
-    this._cssLoader.load("./app/views/list/css/genre.css");
-    this._cssLoader.load("./app/views/list/css/song.css");
+    this.#cssLoader = new CssLoader();
 
-    this.#body = document.body;
+    this.#cssLoader.load("./app/views/css/reset.css");
+    this.#cssLoader.load("./app/views/css/settings.css");
+
+    this.#cssLoader.load("./app/views/list/css/genre.css");
+    this.#cssLoader.load("./app/views/list/css/song.css");
   }
 
-  get listeners() {
-    return this.#listeners;
+  init() {
+    for (const component of this.#components)
+      component.init();
   }
 
-  addGenre(genre) {
-    // container
-    const container = document.createElement("div");
-    container.classList.add("genre");
-    container.textContent = genre.title;
-
-    // components
-
-    // fill
-    this.#body.append(container);
+  get components() {
+    return this.#components;
   }
 
-  addSong(song) {
-    // container
-    const container = document.createElement("div");
-    container.classList.add("song");
+  addComponent(component) {
+    this.#components.push(component);
+  }
 
-    // components
-    const title = document.createElement("div");
-    title.classList.add("title");
-    title.textContent = song.title;
+  removeComponent(component) {
+    // TODO
+  }
 
-    const band = document.createElement("div");
-    band.classList.add("band");
-    band.textContent = song.band;
-
-    const tags = document.createElement("div");
-    tags.classList.add("tags");
-    if (song.tags.length)
-      tags.textContent = "tags: " + "[" + song.tags.join("] [") + "]";
-
-    const raiting = document.createElement("div");
-    raiting.classList.add("raiting");
-    for (let i = 0; i < song.raiting; i++)
-      raiting.textContent += "⭐️";
-
-    // fill
-    container.append(title, band, tags, raiting);
-    this.#body.append(container);
-
-    // listeners
-    this.#listeners.push((handler) => {
-      container.addEventListener('click', () => {
-        handler(song.id);
-      });
-    });
+  setPageTitle(title) {
+    document.title = title;
   }
 }

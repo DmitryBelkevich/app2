@@ -37,4 +37,14 @@ export default class ListView {
   setPageTitle(title) {
     document.title = title;
   }
+
+  get listeners() {
+    const listeners = [];
+    
+    for (const component of this.#components)
+      if (component instanceof SongComponent)
+        listeners.push(component);
+    
+    return listeners;
+  }
 }

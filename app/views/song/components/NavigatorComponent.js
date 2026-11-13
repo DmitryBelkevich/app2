@@ -19,7 +19,7 @@ export default class NavigatorComponent {
     this.#autoscroll_button.init();
 
     // fill
-    document.body.append(container);
+    document.body.append(this.#container);
   }
 
   // 2. auto-scroll

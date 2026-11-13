@@ -1,16 +1,16 @@
 export default class NavigatorComponent {
   #container;
-  #components = [];
+  #components = new Map();
   
   constructor() {
     // container
     this.#container = document.createElement("nav");
 
     // components
-    this.#components["list_button"] = new Button(this.#container)
+    this.#components.set("list_button") = new Button(this.#container)
       .buildContent("◀️");
 
-    this.#components["autoscroll_button"] = new Button(this.#container)
+    this.#components.set("autoscroll_button") = new Button(this.#container)
       .buildContent("⏬")
       .buildId("autoscroll");
   }

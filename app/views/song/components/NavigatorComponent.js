@@ -1,44 +1,24 @@
-export default class NavigatorComponent {
-  #body;
+import Button from './Button.js';
 
-  #list_button;
-  #autoscroll_button;
+export default class NavigatorComponent {
+  #container;
+  #components = new Map();
   
   constructor() {
-    this.#body = document.body;
+    this.#container = document.createElement("nav");
+    
+    this.#components.set("list_button", new Button().content("◀️"));
+    this.#components.set("autoscroll_button", new Button().content("⏬").id("autoscroll"));
   }
 
   init() {
-    // container
-    const container = document.createElement("nav");
-
-    // 1. list
-    this.#list_button = document.createElement("button");
-    this.#list_button.textContent = "◀️";
-
-    // 2. auto-scroll
-    this.#autoscroll_button = document.createElement("button");
-    this.#autoscroll_button.id = "autoscroll";
-    this.#autoscroll_button.textContent = "⏬";
-
-    // fill
-    container.append(this.#list_button, this.#autoscroll_button);
-    this.#body.append(container);
+    for (const component of this.#components.values())
+      this.#container.append(component.element);
+    
+    document.body.append(this.#container);
   }
 
-  // 1. list
-
-  bindList(handler) {
-    this.#list_button.addEventListener("click", () => {
-      handler();
-    });
-  }
-
-  // 2. auto-scroll
-
-  bindAutoScroll(handler) {
-    this.#autoscroll_button.addEventListener("click", () => {
-      handler();
-    });
+  get components() {
+    return this.#components;
   }
 }

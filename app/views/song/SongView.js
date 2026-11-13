@@ -32,8 +32,4 @@ export default class SongView extends View {
   removeComponent(component) {
     // TODO
   }
-
-  setPageTitle(title) {
-    document.title = title;
-  }
 }

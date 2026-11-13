@@ -45,6 +45,7 @@ class Button {
   }
   
   init() {
+    console.log(this.#element);
     this.#container.append(this.#element);
   }
 

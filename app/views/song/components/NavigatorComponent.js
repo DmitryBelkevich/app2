@@ -28,14 +28,6 @@ export default class NavigatorComponent {
     this.#body.append(container);
   }
 
-  // 1. list
-
-  bindList(handler) {
-    this.#list_button.addEventListener("click", () => {
-      handler();
-    });
-  }
-
   // 2. auto-scroll
 
   bindAutoScroll(handler) {
@@ -48,36 +40,21 @@ export default class NavigatorComponent {
 class Button {
   #button;
 
-  #id;
-  #content;
-
   constructor(content) {
-    this.#content = content;
+    this.#button = document.createElement("button");
+    this.#button.textContent = content;
   }
 
   get button() {
     return this.#button;
   }
 
-  set button(button) {
-    this.#button = button;
-  }
-
-  get id() {
-    return this.#id;
-  }
-
   set id(id) {
-    this.#id = id;
+    this.#button.id = id;
   }
   
   init() {
-    this.#button = document.createElement("button");
-
-    if (this.#id)
-      this.#button.id = "autoscroll";
     
-    this.#button.textContent = this.#content;
   }
 
   bind(handler) {

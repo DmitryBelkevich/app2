@@ -9,6 +9,16 @@ export default class SongComponent {
   }
 
   init() {
-    
+    // container
+    const container = document.createElement("div");
+    container.classList.add("song");
+
+    // components
+    const title = document.createElement("div");
+    title.classList.add("title");
+    title.textContent = this.#song.title;
+
+    // fill
+    this.#body.append(container);
   }
 }

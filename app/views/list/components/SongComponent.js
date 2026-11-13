@@ -42,6 +42,6 @@ export default class SongComponent {
       container.addEventListener('click', () => {console.log(this.#song.id);
         handler(this.#song.id);
       });
-    };
+    }
   }
 }

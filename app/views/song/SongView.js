@@ -14,6 +14,8 @@ export default class SongView {
     this.#cssLoader.load("./app/views/css/reset.css");
     this.#cssLoader.load("./app/views/css/settings.css");
 
+    this.#cssLoader.load("./app/views/song/css/nav.css");
+
     this.#autoscroll = new Autoscroll();
     // this.#autoscroll.run();
   }

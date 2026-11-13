@@ -34,6 +34,10 @@ class Button {
     return this;
   }
 
+  get element() {
+    return this.#element;
+  }
+
   content(content) {
     this.#element.textContent = content;
     return this;

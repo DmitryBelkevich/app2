@@ -34,7 +34,10 @@ export default class ListController extends Controller {
     this.#view = new ListView();
 
     for (const genre of this.#genres) {
-      this.#view.addComponent(new GenreComponent());
+      this.#view.addComponent(new GenreComponent(genre));
+
+      for (const song of genre.songs)
+        this.#view.addComponent(new SongComponent(song));
     }
     
     this.#view.init();

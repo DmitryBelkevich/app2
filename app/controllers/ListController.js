@@ -44,10 +44,11 @@ export default class ListController extends Controller {
     this.#view.init();
 
     // binds
-    // this.#view.listeners.forEach(listener => listener(this.#openSong));
+    // this.#view.components.listeners.forEach(listener => listener(this.#openSong));
+    console.log(this.#view.components);
   }
 
-  // #openSong = (id) => {
-  //   window.location.href = window.location.origin + "/" + Config.APP_NAME + "/song?id=" + id;
-  // }
+  #openSong = (id) => {
+    window.location.href = window.location.origin + "/" + Config.APP_NAME + "/song?id=" + id;
+  }
 }

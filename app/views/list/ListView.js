@@ -23,4 +23,8 @@ export default class ListView {
   removeComponent(component) {
     // TODO
   }
+
+  setPageTitle(title) {
+    document.title = title;
+  }
 }

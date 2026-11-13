@@ -12,6 +12,9 @@ export default class ListView {
 
     this.#cssLoader.load("./app/views/css/reset.css");
     this.#cssLoader.load("./app/views/css/settings.css");
+
+    this._cssLoader.load("./app/views/list/css/genre.css");
+    this._cssLoader.load("./app/views/list/css/song.css");
   }
 
   init() {

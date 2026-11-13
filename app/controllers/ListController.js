@@ -6,6 +6,8 @@ import SongService from '../services/SongService.js';
 import GenreService from '../services/GenreService.js';
 
 import ListView from '../views/list/ListView.js';
+import GenreComponent from '../views/components/GenreComponent.js';
+import SongComponent from '../views/components/SongComponent.js';
 
 export default class ListController extends Controller {
   #songService;
@@ -30,6 +32,11 @@ export default class ListController extends Controller {
     console.log(this.#genres);
 
     this.#view = new ListView();
+
+    for (const genre of this.#genres) {
+      this.#view.addComponent(new GenreComponent());
+    }
+    
     this.#view.init();
   }
 }

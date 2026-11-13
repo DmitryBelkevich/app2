@@ -18,6 +18,10 @@ export default class SongComponent {
     title.classList.add("title");
     title.textContent = this.#song.title;
 
+    const band = document.createElement("div");
+    band.classList.add("band");
+    band.textContent = this.#song.band;
+
     // fill
     container.append(title);
     this.#body.append(container);

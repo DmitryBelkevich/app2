@@ -1,5 +1,6 @@
 export default class GenreComponent {
   #genre;
+  #body;
   
   constructor(genre) {
     this.#genre = genre;

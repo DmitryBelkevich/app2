@@ -27,10 +27,6 @@ export default class ListView extends View {
     // TODO
   }
 
-  setPageTitle(title) {
-    document.title = title;
-  }
-
   get listeners() {
     const listeners = [];
     

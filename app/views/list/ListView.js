@@ -38,8 +38,7 @@ export default class ListView extends View {
     const listeners = [];
     
     for (const component of this.#components)
-      if (component instanceof SongComponent)
-        listeners.push(...component.listeners);
+      listeners.push(...component.listeners);
     
     return listeners;
   }

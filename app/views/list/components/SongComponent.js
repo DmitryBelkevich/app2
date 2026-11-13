@@ -25,11 +25,11 @@ export default class SongComponent {
     const tags = document.createElement("div");
     tags.classList.add("tags");
     if (song.tags.length)
-      tags.textContent = "tags: " + "[" + song.tags.join("] [") + "]";
+      tags.textContent = "tags: " + "[" + this.#song.tags.join("] [") + "]";
 
     const raiting = document.createElement("div");
     raiting.classList.add("raiting");
-    for (let i = 0; i < song.raiting; i++)
+    for (let i = 0; i < this.#song.raiting; i++)
       raiting.textContent += "⭐️";
 
     // fill

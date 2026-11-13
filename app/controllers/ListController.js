@@ -44,7 +44,6 @@ export default class ListController extends Controller {
     this.#view.init();
 
     // binds
-    // this.#view.components.listeners.forEach(listener => listener(this.#openSong));
     for (const component of this.#view.components) {
       if (component instanceof SongComponent) {
         component.listeners.forEach(listener => listener(this.#openSong));

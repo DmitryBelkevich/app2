@@ -3,6 +3,7 @@ import Controller from './Controller.js';
 import SongService from '../services/SongService.js';
 
 import SongView from '../views/song/SongView.js';
+import NavigatorComponent from '../views/song/components/NavigatorComponent.js';
 import TextComponent from '../views/song/components/TextComponent.js';
 
 export default class SongController extends Controller {
@@ -24,6 +25,7 @@ export default class SongController extends Controller {
     this.#view = new SongView();
     this.#view.setPageTitle(this.#song.band + " - " + this.#song.title);
 
+    this.#view.addComponent(new NavigatorComponent());
     this.#view.addComponent(new TextComponent(this.#song));
     
     this.#view.init();

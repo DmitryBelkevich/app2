@@ -17,7 +17,7 @@ export default class NavigatorComponent {
 
   init() {
     // components
-    for (const component of this.#components)
+    for (const component of this.#components.values())
       component.init();
 
     // fill
@@ -45,7 +45,6 @@ class Button {
   }
   
   init() {
-    console.log(this.#element);
     this.#container.append(this.#element);
   }
 

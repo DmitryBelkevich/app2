@@ -15,13 +15,12 @@ export default class SongView {
     this.#cssLoader.load("./app/views/css/settings.css");
 
     this.#autoscroll = new Autoscroll();
+    // this.#autoscroll.run();
   }
 
   init() {
     for (const component of this.#components)
       component.init();
-
-    this.#autoscroll.run();
   }
 
   get components() {

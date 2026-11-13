@@ -22,11 +22,11 @@ export default class SongController extends Controller {
     this.#song = await this.#songService.getById(this._params.id);
     console.log(this.#song);
 
-    this.#view = new SongView();
-    this.#view.setPageTitle(this.#song.band + " - " + this.#song.title);
+    this.#view = new SongView(this.#song);
+    // this.#view.setPageTitle(this.#song.band + " - " + this.#song.title);
 
-    this.#view.addComponent(new NavigatorComponent());
-    this.#view.addComponent(new TextComponent(this.#song));
+    // this.#view.addComponent(new NavigatorComponent());
+    // this.#view.addComponent(new TextComponent(this.#song));
     
     this.#view.init();
 

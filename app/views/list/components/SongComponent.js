@@ -1,5 +1,5 @@
 export default class SongComponent {
-  constructor() {
+  constructor(song) {
     
   }
 

@@ -9,6 +9,10 @@ export default class SongComponent {
     this.#body = document.body;
   }
 
+  get listeners() {
+    return this.#listeners;
+  }
+
   init() {
     // container
     const container = document.createElement("div");

@@ -1,20 +1,16 @@
-import CssLoader from '../loaders/CssLoader.js';
+import View from '../View.js';
 
 import GenreComponent from './components/GenreComponent.js';
 import SongComponent from './components/SongComponent.js';
 
 export default class ListView {
-  #cssLoader;
   #components = [];
   
   constructor() {
-    this.#cssLoader = new CssLoader();
+    super();
 
-    this.#cssLoader.load("./app/views/css/reset.css");
-    this.#cssLoader.load("./app/views/css/settings.css");
-
-    this.#cssLoader.load("./app/views/list/css/genre.css");
-    this.#cssLoader.load("./app/views/list/css/song.css");
+    this._cssLoader.load("./app/views/list/css/genre.css");
+    this._cssLoader.load("./app/views/list/css/song.css");
   }
 
   init() {

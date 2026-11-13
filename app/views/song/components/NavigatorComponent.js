@@ -22,14 +22,6 @@ export default class NavigatorComponent {
     // fill
     document.body.append(this.#container);
   }
-
-  // 2. auto-scroll
-
-  bindAutoScroll(handler) {
-    this.#autoscroll_button.addEventListener("click", () => {
-      handler();
-    });
-  }
 }
 
 class Button {

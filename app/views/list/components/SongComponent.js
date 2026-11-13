@@ -35,5 +35,10 @@ export default class SongComponent {
     // fill
     container.append(title, band, tags, raiting);
     this.#body.append(container);
+
+    // listener
+    container.addEventListener('click', () => {
+      console.log("Hello World");
+    });
   }
 }

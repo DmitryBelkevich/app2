@@ -9,6 +9,9 @@ export default class ListView {
   
   constructor() {
     this.#cssLoader = new CssLoader();
+
+    this.#cssLoader.load("./app/views/css/reset.css");
+    this.#cssLoader.load("./app/views/css/settings.css");
   }
 
   init() {

@@ -1,0 +1,34 @@
+export default class Autoscroll {
+  #speed = 10;//1 slow, 10 normal, 100 fast.
+  #animationFrameId;
+
+  constructor() {
+    
+  }
+
+  set speed(speed) {
+    this.#speed = speed;
+  }
+
+  get speed() {
+    return this.#speed;
+  }
+
+  #step = () => {
+    window.scrollBy(0, 1);
+    
+    if ((window.innerHeight + window.scrollY) < document.body.offsetHeight) {
+      setTimeout(() => {
+        this.#animationFrameId = requestAnimationFrame(this.#step);
+      }, 1000 / this.#speed);
+    }
+  }
+  
+  run() {
+    this.#animationFrameId = requestAnimationFrame(this.#step);
+  }
+  
+  stop() {
+    cancelAnimationFrame(this.#animationFrameId);
+  }
+}

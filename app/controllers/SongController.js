@@ -9,7 +9,7 @@ export default class SongController extends Controller {
   
   #song;
   
-  #songView;
+  #view;
   
   constructor() {
     super();
@@ -20,7 +20,8 @@ export default class SongController extends Controller {
     this.#song = await this.#songService.getById(this._params.id);
     console.log(this.#song);
 
-    this.#songView = new SongView();
-    this.#songView.setPageTitle(this.#song.band + " - " + this.#song.title);//to View consctructor
+    this.#view = new SongView();
+    this.#view.init();
+    // this.#view.setPageTitle(this.#song.band + " - " + this.#song.title);//to View consctructor
   }
 }

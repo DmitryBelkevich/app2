@@ -30,21 +30,5 @@ export default class ListController extends Controller {
     console.log(this.#genres);
 
     this.#view = new ListView();
-
-    // add components
-    for (const genre of this.#genres) {
-      this.#view.addGenre(genre);
-
-      for (const song of genre.songs) {
-        this.#view.addSong(song);
-      }
-    }
-
-    // binds
-    this.#view.listeners.forEach(listener => listener(this.#openSong));
-  }
-
-  #openSong = (id) => {
-    window.location.href = window.location.origin + "/" + Config.APP_NAME + "/song?id=" + id;
   }
 }

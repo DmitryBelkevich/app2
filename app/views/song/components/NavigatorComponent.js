@@ -34,10 +34,6 @@ class Button {
     this.#element.textContent = content;
   }
 
-  get element() {
-    return this.#element;
-  }
-
   set id(id) {
     this.#element.id = id;
   }

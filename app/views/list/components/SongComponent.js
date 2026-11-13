@@ -38,7 +38,7 @@ export default class SongComponent {
 
     // listener
     container.addEventListener('click', () => {
-      console.log("Hello World");
+      console.log(this.#song.id);
     });
   }
 }

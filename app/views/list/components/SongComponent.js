@@ -24,7 +24,7 @@ export default class SongComponent {
 
     const tags = document.createElement("div");
     tags.classList.add("tags");
-    if (song.tags.length)
+    if (this.#song.tags.length)
       tags.textContent = "tags: " + "[" + this.#song.tags.join("] [") + "]";
 
     const raiting = document.createElement("div");

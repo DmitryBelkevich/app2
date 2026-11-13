@@ -22,7 +22,7 @@ export default class NavigatorComponent {
     this.#autoscroll_button.textContent = "⏬";
 
     // fill
-    container.append(this.#list_button, this.#autoscroll_button);
+    container.append(this.#list_button.#button, this.#autoscroll_button);
     this.#body.append(container);
   }
 

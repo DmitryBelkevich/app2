@@ -17,7 +17,7 @@ export default class NavigatorComponent {
 
   init() {
     // components
-    for (const component of this.#components)
+    for (const component of this.#components.values())
       component.init();
 
     // fill

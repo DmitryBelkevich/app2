@@ -1,3 +1,5 @@
+import CssLoader from './loaders/CssLoader.js';
+
 export default class View {
   _cssLoader;
   

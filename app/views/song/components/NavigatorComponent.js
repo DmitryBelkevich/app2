@@ -7,10 +7,10 @@ export default class NavigatorComponent {
     this.#container = document.createElement("nav");
 
     // components
-    this.#components["list_button"] = new Button()
+    this.#components["list_button"] = new Button(this.#container)
       .buildContent("◀️");
 
-    this.#components["autoscroll_button"] = new Button()
+    this.#components["autoscroll_button"] = new Button(this.#container)
       .buildContent("⏬")
       .buildId("autoscroll");
   }

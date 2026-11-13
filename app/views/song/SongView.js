@@ -6,7 +6,7 @@ import TextComponent from './components/TextComponent.js';
 import Autoscroll from './services/Autoscroll.js';
 
 export default class SongView extends View {
-  #components = [];
+  #components = new Map();
 
   #autoscroll;
   
@@ -20,8 +20,8 @@ export default class SongView extends View {
 
     this.setPageTitle(song.band + " - " + song.title);
 
-    this.addComponent(new NavigatorComponent());
-    this.addComponent(new TextComponent(song));
+    this.#components.set("navigator", new NavigatorComponent());
+    this.#components.set("text", new TextComponent(song));
   }
 
   init() {
@@ -31,13 +31,5 @@ export default class SongView extends View {
 
   get components() {
     return this.#components;
-  }
-
-  addComponent(component) {
-    this.#components.push(component);
-  }
-
-  removeComponent(component) {
-    // TODO
   }
 }

@@ -4,6 +4,8 @@ export default class SongComponent {
   
   constructor(song) {
     this.#song = song;
+
+    this.#body = document.body;
   }
 
   init() {

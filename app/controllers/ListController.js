@@ -32,7 +32,7 @@ export default class ListController extends Controller {
 
     // binds
     // this.#view.listeners.forEach(listener => listener(this.#open_song_controller));
-    const arr = this.#view.song_components();
+    const arr = this.#view.getSongComponents();
     console.log(arr);
   }
 

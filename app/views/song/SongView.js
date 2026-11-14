@@ -16,7 +16,6 @@ export default class SongView extends View {
     this._cssLoader.load("./app/views/song/css/nav.css");
 
     this.#autoscroll = new Autoscroll();
-    // this.#autoscroll.run();
 
     this.setPageTitle(song.band + " - " + song.title);
 

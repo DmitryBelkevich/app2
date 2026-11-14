@@ -1,9 +1,9 @@
 import View from '../View.js';
 
-import NavigatorPanel from './components/NavigatorPanel.js';
-import TitlePanel from './components/TitlePanel.js';
-import TabsPanel from './components/TabsPanel.js';
-import TextPanel from './components/TextPanel.js';
+import NavigatorPanel from './panels/NavigatorPanel.js';
+import TitlePanel from './panels/TitlePanel.js';
+import TabsPanel from './panels/TabsPanel.js';
+import TextPanel from './panels/TextPanel.js';
 
 import Autoscroll from './services/Autoscroll.js';
 

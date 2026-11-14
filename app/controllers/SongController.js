@@ -1,17 +1,13 @@
+import Config from '../config/Config.js';
+
 import Controller from './Controller.js';
 
 import SongService from '../services/SongService.js';
 
 import SongView from '../views/song/SongView.js';
-import NavigatorComponent from '../views/song/components/NavigatorComponent.js';
-import TextComponent from '../views/song/components/TextComponent.js';
 
 export default class SongController extends Controller {
   #songService;
-  
-  #song;
-  
-  #view;
   
   constructor() {
     super();
@@ -19,17 +15,21 @@ export default class SongController extends Controller {
   }
 
   async init() {
-    this.#song = await this.#songService.getById(this._params.id);
-    console.log(this.#song);
+    const song = await this.#songService.getById(this._params.id);
+    console.log(song);
 
-    this.#view = new SongView();
-    this.#view.setPageTitle(this.#song.band + " - " + this.#song.title);
-
-    this.#view.addComponent(new NavigatorComponent());
-    this.#view.addComponent(new TextComponent(this.#song));
-    
-    this.#view.init();
+    const view = new SongView(song);
+    view.init();
 
     // binds
+    view.components.get("navigator").components.get("list_button").click(this.open_list_controller);
+    // view.components.get("navigator").components.get("autoscroll_button").click();
+  }
+
+  open_list_controller = () => {
+    if (window.history.length > 1 && document.referrer.includes(window.location.hostname))
+      history.back();
+    else
+      window.location.href = window.location.origin + "/" + Config.APP_NAME + "/list";
   }
 }

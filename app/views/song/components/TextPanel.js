@@ -1,4 +1,4 @@
-export default class TextComponent {
+export default class TextPanel {
   constructor() {
     
   }

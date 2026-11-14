@@ -1,6 +1,6 @@
 import Button from './Button.js';
 
-export default class NavigatorComponent {
+export default class NavigatorPanel {
   #element;
   #components = new Map();
   

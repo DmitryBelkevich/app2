@@ -1,4 +1,4 @@
-export default class TitleComponent {
+export default class TitlePanel {
   #element;
   
   constructor(song) {

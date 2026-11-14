@@ -1,27 +1,17 @@
 export default class GenreComponent {
-  #genre;
-  #body;
-  #listeners = [];
+  #element;
   
   constructor(genre) {
-    this.#genre = genre;
-
-    this.#body = document.body;
+    this.#element = document.createElement("div");
+    this.#element.classList.add("genre");
+    this.#element.textContent = genre.title;
   }
 
-  get listeners() {
-    return this.#listeners;
+  get element() {
+    return this.#element;
   }
 
   init() {
-    // container
-    const container = document.createElement("div");
-    container.classList.add("genre");
-    container.textContent = this.#genre.title;
-
-    // components
-
-    // fill
-    this.#body.append(container);
+    
   }
 }

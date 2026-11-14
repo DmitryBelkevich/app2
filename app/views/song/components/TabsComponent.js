@@ -1,6 +1,6 @@
 export default class TabsComponent {
   #element;
-  #tabs = new Map();
+  #components = new Map();// tabs
   
   constructor() {
     // container
@@ -10,5 +10,9 @@ export default class TabsComponent {
 
   init() {
     document.body.append(this.#element);
+  }
+
+  get components() {
+    return this.#components;
   }
 }

@@ -31,6 +31,7 @@ export default class ListController extends Controller {
 
     // binds
     // this.#view.listeners.forEach(listener => listener(this.#open_song_controller));
+    console.log(this.#view.components);
   }
 
   #open_song_controller = (id) => {

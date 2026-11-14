@@ -27,7 +27,7 @@ export default class SongController extends Controller {
   }
 
   open_list_controller = () => {
-    if (window.history.length > 1)
+    if (window.history.length > 1 && document.referrer.includes(window.location.hostname))
       history.back();
     else
       window.location.href = window.location.origin + "/" + Config.APP_NAME + "/list";

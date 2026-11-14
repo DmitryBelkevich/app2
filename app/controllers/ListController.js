@@ -10,8 +10,6 @@ import ListView from '../views/list/ListView.js';
 export default class ListController extends Controller {
   #songService;
   #genreService;
-  
-  #view;
 
   constructor() {
     super();
@@ -26,12 +24,11 @@ export default class ListController extends Controller {
     console.log(songs);
     console.log(genres);
 
-    this.#view = new ListView(genres);
-    this.#view.init();
+    const view = new ListView(genres);
+    view.init();
 
     // binds
-    // this.#view.listeners.forEach(listener => listener(this.#open_song_controller));
-    this.#view.getSongComponents().forEach(songComponent => songComponent.click(this.#open_song_controller));
+    view.getSongComponents().forEach(component => component.click(this.#open_song_controller));
   }
 
   #open_song_controller = (id) => {

@@ -1,5 +1,5 @@
 export default class TitleComponent {
-  constructor() {
+  constructor(song) {
     
   }
 

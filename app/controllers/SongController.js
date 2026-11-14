@@ -23,7 +23,7 @@ export default class SongController extends Controller {
 
     // binds
     view.components.get("navigator").components.get("list_button").click(this.open_list_controller);
-    // view.components.get("navigator").components.get("autoscroll_button").click();
+    view.components.get("navigator").components.get("autoscroll_button").click(this.run_autoscroll);
   }
 
   open_list_controller = () => {
@@ -31,5 +31,9 @@ export default class SongController extends Controller {
       history.back();
     else
       window.location.href = window.location.origin + "/" + Config.APP_NAME + "/list";
+  }
+
+  run_autoscroll = () => {
+    console.log("auto-scroll");
   }
 }

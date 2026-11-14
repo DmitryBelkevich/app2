@@ -1,3 +1,5 @@
+import Button from './Button.js';
+
 export default class TabsComponent {
   #element;
   #components = new Map();// tabs

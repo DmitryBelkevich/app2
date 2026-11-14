@@ -18,6 +18,11 @@ export default class Button {
     this.#element.textContent = content;
     return this;
   }
+
+  addClass(clazz) {
+    this.#element.classList.add(clazz);
+    return this;
+  }
   
   init() {
     

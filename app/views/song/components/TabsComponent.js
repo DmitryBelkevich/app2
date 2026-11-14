@@ -9,9 +9,9 @@ export default class TabsComponent {
     this.#element = document.createElement("div");
     this.#element.id = "tabs";
 
-    this.#components.set("tab_text", new Button().content("📝 Text & Chords"));
-    this.#components.set("tab_score", new Button().content("🎵 Scores"));
-    this.#components.set("tab_playback", new Button().content("🎧 Playbacks"));
+    this.#components.set("tab_text", new Button().content("📝 Text & Chords").addClass("tab"));
+    this.#components.set("tab_score", new Button().content("🎵 Scores").addClass("tab"));
+    this.#components.set("tab_playback", new Button().content("🎧 Playbacks").addClass("tab"));
   }
 
   init() {

@@ -23,7 +23,7 @@ export default class ListView extends View {
   }
 
   init() {
-    for (const component of this.#components.values())
+    for (const component of this.#components)
       component.init();
   }
 

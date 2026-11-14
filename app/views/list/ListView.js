@@ -30,8 +30,4 @@ export default class ListView extends View {
   get components() {
     return this.#components;
   }
-
-  getSongComponents() {
-    return this.#components.filter(component => component instanceof SongComponent);
-  }
 }

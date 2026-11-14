@@ -1,9 +1,9 @@
 import View from '../View.js';
 
 import NavigatorPanel from './components/NavigatorPanel.js';
-import TitleComponent from './components/TitleComponent.js';
-import TabsComponent from './components/TabsComponent.js';
-import TextComponent from './components/TextComponent.js';
+import TitlePanel from './components/TitlePanel.js';
+import TabsPanel from './components/TabsPanel.js';
+import TextPanel from './components/TextPanel.js';
 
 import Autoscroll from './services/Autoscroll.js';
 
@@ -21,9 +21,9 @@ export default class SongView extends View {
     this.setPageTitle(song.band + " - " + song.title);
 
     this.#components.set("navigator", new NavigatorPanel());
-    this.#components.set("title", new TitleComponent(song));
-    this.#components.set("tabs", new TabsComponent());
-    this.#components.set("text", new TextComponent());
+    this.#components.set("title", new TitlePanel(song));
+    this.#components.set("tabs", new TabsPanel());
+    this.#components.set("text", new TextPanel());
   }
 
   init() {

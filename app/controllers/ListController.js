@@ -6,15 +6,10 @@ import SongService from '../services/SongService.js';
 import GenreService from '../services/GenreService.js';
 
 import ListView from '../views/list/ListView.js';
-import GenreComponent from '../views/list/components/GenreComponent.js';
-import SongComponent from '../views/list/components/SongComponent.js';
 
 export default class ListController extends Controller {
   #songService;
   #genreService;
-  
-  #songs;
-  #genres;
   
   #view;
 
@@ -25,26 +20,17 @@ export default class ListController extends Controller {
   }
 
   async init() {
-    this.#songs = await this.#songService.getAll();
-    this.#genres = await this.#genreService.getAll();
+    const songs = await this.#songService.getAll();
+    const genres = await this.#genreService.getAll();
 
-    console.log(this.#songs);
-    console.log(this.#genres);
+    console.log(songs);
+    console.log(genres);
 
-    this.#view = new ListView();
-    this.#view.setPageTitle("Track-list");
-
-    for (const genre of this.#genres) {
-      this.#view.addComponent(new GenreComponent(genre));
-
-      for (const song of genre.songs)
-        this.#view.addComponent(new SongComponent(song));
-    }
-    
+    this.#view = new ListView(genres);
     this.#view.init();
 
     // binds
-    this.#view.listeners.forEach(listener => listener(this.#open_song_controller));
+    // this.#view.listeners.forEach(listener => listener(this.#open_song_controller));
   }
 
   #open_song_controller = (id) => {

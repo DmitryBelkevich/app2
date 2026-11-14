@@ -1,5 +1,6 @@
 export default class TabsComponent {
   #element;
+  #tabs = new Map();
   
   constructor() {
     // container

@@ -10,6 +10,8 @@ export default class TabsComponent {
     this.#element.id = "tabs";
 
     this.#components.set("tab_text", new Button().content("📝 Text & Chords"));
+    this.#components.set("tab_score", new Button().content("🎵 Scores"));
+    this.#components.set("tab_playback", new Button().content("🎧 Playbacks"));
   }
 
   init() {

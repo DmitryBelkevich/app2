@@ -1,21 +1,21 @@
 import Button from './Button.js';
 
 export default class NavigatorComponent {
-  #container;
+  #element;
   #components = new Map();
   
   constructor() {
-    this.#container = document.createElement("nav");
+    this.#element = document.createElement("nav");
     
-    this.#components.set("list_button", new Button().content("◀️"));
-    this.#components.set("autoscroll_button", new Button().content("⏬").id("autoscroll"));
+    this.#components.set("list_button", new Button("◀️"));
+    this.#components.set("autoscroll_button", new Button("⏬").id("autoscroll"));
   }
 
   init() {
     for (const component of this.#components.values())
-      this.#container.append(component.element);
+      this.#element.append(component.element);
     
-    document.body.append(this.#container);
+    document.body.append(this.#element);
   }
 
   get components() {

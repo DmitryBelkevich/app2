@@ -27,6 +27,7 @@ export default class SongController extends Controller {
   }
 
   open_list_controller = () => {
-    window.location.href = window.location.origin + "/" + Config.APP_NAME + "/list";
+    // window.location.href = window.location.origin + "/" + Config.APP_NAME + "/list";
+    history.back();
   }
 }

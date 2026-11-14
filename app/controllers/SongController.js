@@ -8,6 +8,8 @@ import SongView from '../views/song/SongView.js';
 
 export default class SongController extends Controller {
   #songService;
+
+  #view;
   
   constructor() {
     super();
@@ -18,13 +20,15 @@ export default class SongController extends Controller {
     const song = await this.#songService.getById(this._params.id);
     console.log(song);
 
-    const view = new SongView(song);
-    view.init();
+    this.#view = new SongView(song);
+    this.#view.init();
 
     // binds
-    view.components.get("navigator").components.get("list_button").click(this.open_list_controller);
-    view.components.get("navigator").components.get("autoscroll_button").click(this.run_autoscroll);
+    this.#view.components.get("navigator").components.get("list_button").click(this.open_list_controller);
+    this.#view.components.get("navigator").components.get("autoscroll_button").click(this.run_autoscroll);
   }
+
+  // *** nav ***
 
   open_list_controller = () => {
     if (window.history.length > 1 && document.referrer.includes(window.location.hostname))
@@ -34,6 +38,7 @@ export default class SongController extends Controller {
   }
 
   run_autoscroll = () => {
-    console.log("auto-scroll");
+    // this.#view.autoscroll.speed = 10;
+    this.#view.autoscroll.run();
   }
 }

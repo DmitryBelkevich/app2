@@ -1,8 +1,9 @@
 export default class Button {
   #element;
 
-  constructor() {
+  constructor(content) {
     this.#element = document.createElement("button");
+    this.#element.textContent = content;
   }
 
   get element() {
@@ -11,11 +12,6 @@ export default class Button {
 
   id(id) {
     this.#element.id = id;
-    return this;
-  }
-
-  content(content) {
-    this.#element.textContent = content;
     return this;
   }
 

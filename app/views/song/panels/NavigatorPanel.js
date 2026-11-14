@@ -5,6 +5,7 @@ export default class NavigatorPanel {
   #components = new Map();
   
   constructor() {
+    // container
     this.#element = document.createElement("nav");
     this.#element.classList.add("panel");
     

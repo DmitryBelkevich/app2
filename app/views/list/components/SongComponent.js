@@ -1,22 +1,14 @@
 export default class SongComponent {
   #song;
-  #body;
-  #listeners = [];
+  #container;
+  #components = new Map();
   
   constructor(song) {
     this.#song = song;
 
-    this.#body = document.body;
-  }
-
-  get listeners() {
-    return this.#listeners;
-  }
-
-  init() {
     // container
-    const container = document.createElement("div");
-    container.classList.add("song");
+    this.#container = document.createElement("div");
+    this.#container.classList.add("song");
 
     // components
     const title = document.createElement("div");
@@ -37,15 +29,16 @@ export default class SongComponent {
     for (let i = 0; i < this.#song.raiting; i++)
       raiting.textContent += "⭐️";
 
-    // fill
-    container.append(title, band, tags, raiting);
-    this.#body.append(container);
+    this.#container.append(title, band, tags, raiting);
+  }
 
-    // listeners
-    this.#listeners.push((handler) => {
-      container.addEventListener('click', () => {
-        handler(this.#song.id);
-      });
+  init() {
+    document.body.append(this.#container);
+  }
+
+  click(handler) {
+    this.#element.addEventListener("click", () => {
+      handler(this.#song.id);
     });
   }
 }

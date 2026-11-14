@@ -18,7 +18,7 @@ export default class ListView extends View {
       this.#components.set(genre.title, new GenreComponent(genre));
 
       for (const song of genre.songs)
-        this.#components.set(genre.title, new SongComponent(song));
+        this.#components.set(song.id, new SongComponent(song));
     }
   }
 

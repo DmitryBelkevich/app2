@@ -12,7 +12,7 @@ export default class ListView extends View {
     this._cssLoader.load("./app/views/list/css/genre.css");
     this._cssLoader.load("./app/views/list/css/song.css");
 
-    this.setPageTitle("Track-list");
+    this.setPageTitle("Track-list");console.log(genres);
 
     for (const genre of genres) {
       this.#components.set(genre.title, new GenreComponent(genre));

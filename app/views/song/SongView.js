@@ -14,6 +14,7 @@ export default class SongView extends View {
     super();
     
     this._cssLoader.load("./app/views/song/css/nav.css");
+    this._cssLoader.load("./app/views/song/css/title.css");
 
     this.setPageTitle(song.band + " - " + song.title);
 

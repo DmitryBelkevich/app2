@@ -22,9 +22,10 @@ export default class SongController extends Controller {
     view.init();
 
     // binds
+    view.navigator.click(this.open_list_controller);
   }
 
-  openList = () => {
+  open_list_controller = () => {
     window.location.href = window.location.origin + "/" + Config.APP_NAME + "/list";
   }
 }

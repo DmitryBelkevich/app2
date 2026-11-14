@@ -28,6 +28,8 @@ export default class SongController extends Controller {
     this.#view.components.get("navigator").components.get("autoscroll_button").click(this.run_autoscroll);
   }
 
+  // *** nav ***
+
   open_list_controller = () => {
     if (window.history.length > 1 && document.referrer.includes(window.location.hostname))
       history.back();

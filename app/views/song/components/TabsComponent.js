@@ -6,6 +6,8 @@ export default class TabsComponent {
     // container
     this.#element = document.createElement("div");
     this.#element.id = "tabs";
+
+    this.#components.set("tab_text", new Button().content("📝 Text & Chords"));
   }
 
   init() {

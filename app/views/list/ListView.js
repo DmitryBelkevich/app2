@@ -4,7 +4,7 @@ import GenreComponent from './components/GenreComponent.js';
 import SongComponent from './components/SongComponent.js';
 
 export default class ListView extends View {
-  #components = new Map();
+  #components = [];
   
   constructor(genres) {
     super();
@@ -12,13 +12,13 @@ export default class ListView extends View {
     this._cssLoader.load("./app/views/list/css/genre.css");
     this._cssLoader.load("./app/views/list/css/song.css");
 
-    this.setPageTitle("Track-list");console.log(genres);
+    this.setPageTitle("Track-list");
 
     for (const genre of genres) {
-      this.#components.set(genre.title, new GenreComponent(genre));
+      this.#components.push(new GenreComponent(genre));
 
       for (const song of genre.songs)
-        this.#components.set(song.id, new SongComponent(song));
+        this.#components.push(new SongComponent(song));
     }
   }
 

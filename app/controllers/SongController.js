@@ -22,7 +22,8 @@ export default class SongController extends Controller {
     view.init();
 
     // binds
-    view.navigator.click(this.open_list_controller);
+    // view.components.navigator.click(this.open_list_controller);
+    console.log(view.components);
   }
 
   open_list_controller = () => {

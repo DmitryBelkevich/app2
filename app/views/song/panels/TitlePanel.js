@@ -5,6 +5,7 @@ export default class TitlePanel {
     // container
     this.#element = document.createElement("div");
     this.#element.id = "title";
+    this.#element.classList.add("panel");
 
     // 1. title
     const title = document.createElement('div');

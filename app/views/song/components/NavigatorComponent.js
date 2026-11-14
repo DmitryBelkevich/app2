@@ -7,8 +7,8 @@ export default class NavigatorComponent {
   constructor() {
     this.#container = document.createElement("nav");
     
-    this.#components.set("list_button", new Button().content("◀️"));
-    this.#components.set("autoscroll_button", new Button().content("⏬").id("autoscroll"));
+    this.#components.set("list_button", new Button("◀️"));
+    this.#components.set("autoscroll_button", new Button("⏬").id("autoscroll"));
   }
 
   init() {

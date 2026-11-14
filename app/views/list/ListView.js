@@ -31,12 +31,7 @@ export default class ListView extends View {
     return this.#components;
   }
 
-  get listeners() {
-    const listeners = [];
-    
-    for (const component of this.#components)
-      listeners.push(...component.listeners);
-    
-    return listeners;
+  get song_components() {
+    return this.#components.filter(component => component instanceof SongComponent);;
   }
 }

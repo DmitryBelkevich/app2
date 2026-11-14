@@ -1,6 +1,6 @@
 import Button from './Button.js';
 
-export default class TabsComponent {
+export default class TabsPanel {
   #element;
   #components = new Map();// tabs
   

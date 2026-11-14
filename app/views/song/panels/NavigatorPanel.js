@@ -5,7 +5,9 @@ export default class NavigatorPanel {
   #components = new Map();
   
   constructor() {
+    // container
     this.#element = document.createElement("nav");
+    this.#element.classList.add("panel");
     
     this.#components.set("list_button", new Button("◀️"));
     this.#components.set("autoscroll_button", new Button("⏬").id("autoscroll"));

@@ -8,7 +8,7 @@ import TextPanel from './panels/TextPanel.js';
 import Autoscroll from './services/Autoscroll.js';
 
 export default class SongView extends View {
-  #components = new Map();
+  #panels = new Map();
   #autoscroll = new Autoscroll();
   
   constructor(song) {
@@ -20,19 +20,19 @@ export default class SongView extends View {
 
     this.setPageTitle(song.band + " - " + song.title);
 
-    this.#components.set("navigator", new NavigatorPanel());
-    this.#components.set("title", new TitlePanel(song));
-    this.#components.set("tabs", new TabsPanel());
-    this.#components.set("text", new TextPanel());
+    this.#panels.set("navigator", new NavigatorPanel());
+    this.#panels.set("title", new TitlePanel(song));
+    this.#panels.set("tabs", new TabsPanel());
+    this.#panels.set("text", new TextPanel());
   }
 
   init() {
-    for (const component of this.#components.values())
-      component.init();
+    for (const panel of this.#panels.values())
+      panel.init();
   }
 
-  get components() {
-    return this.#components;
+  get panels() {
+    return this.#panels;
   }
 
   get autoscroll() {

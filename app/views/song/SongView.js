@@ -32,4 +32,8 @@ export default class SongView extends View {
   get components() {
     return this.#components;
   }
+
+  get autoscroll() {
+    return #autoscroll;
+  }
 }

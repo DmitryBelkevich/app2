@@ -32,6 +32,8 @@ export default class ListView extends View {
   }
 
   get song_components() {
-    return this.#components.filter(component => component instanceof SongComponent);;
+    const arr = this.#components.filter(component => component instanceof SongComponent);
+    console.log(arr);
+    return null;
   }
 }

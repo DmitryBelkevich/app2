@@ -1,13 +1,13 @@
 export default class SongComponent {
   #song;
-  #container;
+  #element;
   
   constructor(song) {
     this.#song = song;
 
     // container
-    this.#container = document.createElement("div");
-    this.#container.classList.add("song");
+    this.#element = document.createElement("div");
+    this.#element.classList.add("song");
 
     // components
     const title = document.createElement("div");
@@ -28,11 +28,15 @@ export default class SongComponent {
     for (let i = 0; i < this.#song.raiting; i++)
       raiting.textContent += "⭐️";
 
-    this.#container.append(title, band, tags, raiting);
+    this.#element.append(title, band, tags, raiting);
+  }
+
+  get element() {
+    return this.#element;
   }
 
   init() {
-    document.body.append(this.#container);
+    document.body.append(this.#element);
   }
 
   click(handler) {

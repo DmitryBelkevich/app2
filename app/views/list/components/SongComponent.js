@@ -1,7 +1,6 @@
 export default class SongComponent {
   #song;
   #container;
-  #components = new Map();
   
   constructor(song) {
     this.#song = song;

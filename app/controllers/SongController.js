@@ -37,7 +37,6 @@ export default class SongController extends Controller {
 
   run_autoscroll = () => {
     // this.#view.autoscroll.speed = 10;
-    
     this.#view.autoscroll.run();
   }
 }

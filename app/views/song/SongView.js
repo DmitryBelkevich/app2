@@ -19,7 +19,7 @@ export default class SongView extends View {
     this.setPageTitle(song.band + " - " + song.title);
 
     this.#components.set("navigator", new NavigatorComponent());
-    this.#components.set("title", new TitleComponent());
+    this.#components.set("title", new TitleComponent(song));
     this.#components.set("text", new TextComponent());
   }
 

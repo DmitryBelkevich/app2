@@ -8,6 +8,7 @@ export default class TabsPanel {
     // container
     this.#element = document.createElement("div");
     this.#element.id = "tabs";
+    this.#element.classList.add("panel");
 
     this.#components.set("tab_text", new Button("📝 Text & Chords").id("tab_text").addClass("tab"));
     this.#components.set("tab_score", new Button("🎵 Scores").id("tab_score").addClass("tab"));

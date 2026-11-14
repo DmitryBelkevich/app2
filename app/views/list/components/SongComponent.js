@@ -12,20 +12,20 @@ export default class SongComponent {
     // components
     const title = document.createElement("div");
     title.classList.add("title");
-    title.textContent = this.#song.title;
+    title.textContent = song.title;
 
     const band = document.createElement("div");
     band.classList.add("band");
-    band.textContent = this.#song.band;
+    band.textContent = song.band;
 
     const tags = document.createElement("div");
     tags.classList.add("tags");
     if (this.#song.tags.length)
-      tags.textContent = "tags: " + "[" + this.#song.tags.join("] [") + "]";
+      tags.textContent = "tags: " + "[" + song.tags.join("] [") + "]";
 
     const raiting = document.createElement("div");
     raiting.classList.add("raiting");
-    for (let i = 0; i < this.#song.raiting; i++)
+    for (let i = 0; i < song.raiting; i++)
       raiting.textContent += "⭐️";
 
     this.#element.append(title, band, tags, raiting);
